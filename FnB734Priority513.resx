@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority35">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @FTypeCollAmt,
+  @FTypeCollPer,
+  @ITypeCollAmt,
+  @ITypeCollPer,
+  @UTypeCollAmt,
+  @UTypeCollPer,
+  @CTypeCollAmt,
+  @CTypeCollPer,
+  @totalCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @ordEstDaysAvg,
+  @casWEstRef,
+  @casWEstRef,
+  @ordEstDaysAvg,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @ordEstDaysAvg,
+  @casWEstRef,
+  @casWEstRef,
+  @caseloadCount,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @ordEstDaysAvg,
+  @casWEstRef,
+  @curSupPdYtdDen,
+  @curSupPdYtdDen,
+  @ordEstDaysAvg,
+  @casWEstRef,
+  @curSupPdYtdDen,
+  @curSupPdYtdDen,
+  @ordEstDaysAvg,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="ReadCase">
+      <value>
+select
+  T1.NUMB,
+  T1.STATUS,
+  T1.STATUS_DATE,
+  T1.CSE_OPEN_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.INTERSTATE_CASE_ID,
+  T1.NO_JURISDICTION_CD
+from
+  CKT_CASE T1 with(readuncommitted)
+where exists
+(
+  select
+    *
+  from
+    CKT_LEGAL_ACT_PERS T5 with(readuncommitted)
+    join
+    CKT_LEG_ACT_CAS_RL T3 with(readuncommitted)
+    join
+    CKT_LA_PER_LA_CROL T4 with(readuncommitted)
+    on
+      T3.LGA_ID = T4.LGA_ID and
+      T3.CAS_NUMBER = T4.CAS_NUM and
+      T3.CRO_IDENTIFIER = T4.CRO_ID and
+      T3.CSP_NUMBER = T4.CSP_NUM and
+      T3.CRO_TYPE = T4.CRO_TYPE
+    on
+      T5.LA_PERSON_ID = T4.LAP_ID and
+      T5.ACCOUNT_TYPE = 'R' and
+      @ladRNumber = T5.LAD_R_NUMBER and
+      @lgaRIdentifier = T5.LGA_R_IDENTIFIER
+  where
+    T1.NUMB = T3.CAS_NUMBER
+)
+</value>
+   </data>
+   <data name="ReadCaseAssignmentServiceProvider">
+      <value>
+select
+  T1.REASON_CODE,
+  T1.EFFECTIVE_DATE,
+  T1.DISCONTINUE_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.SPD_ID,
+  T1.OFF_ID,
+  T1.OSP_CODE,
+  T1.OSP_DATE,
+  T1.CAS_NO,
+  T2.SERVICE_PRVDER_ID,
+  T2.USER_ID,
+  T2.ROLE_CODE
+from
+  CKT_SERVICE_PRVDER T2
+  join
+  CKT_ASSIGN_CASE T1
+  on
+    T1.CAS_NO = @casNo and
+    T1.REASON_CODE = 'RSP' and
+    T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+    T1.DISCONTINUE_DATE &gt;= @discontinueDate and
+    T2.SERVICE_PRVDER_ID = T1.SPD_ID
+order by
+  T1.EFFECTIVE_DATE desc
+</value>
+   </data>
+   <data name="ReadCollectionObligationTypeCsePersonCollectionType">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.CT_ORD_APPLIED_TO,
+      T2.DEBT_TYP_ID,
+      T2.DEBT_TYP_CD,
+      T2.DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE T2 with(readuncommitted)
+      join
+      CKT_COLLECTION T1 with(readuncommitted)
+      on
+        T2.DEBT_TYP_ID = T1.OTY_ID and
+        T2.DEBT_TYP_CLASS &lt;&gt; 'R' and
+        T1.CONCURRENT_IND = 'N' and
+        (
+          T1.CREATED_TMST &gt; @createdTmst1 and
+          T1.CREATED_TMST &lt; @createdTmst2 and
+          (
+            T1.ADJ_IND = 'Y' and
+            T1.COLL_ADJ_DT &gt; @collAdjDt or
+            T1.ADJ_IND = 'N'
+          ) or
+          T1.CREATED_TMST &lt; @createdTmst1 and
+          T1.ADJ_IND = 'Y' and
+          (T1.COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+        ) and
+        T1.CREATED_TMST &lt; @createdTmst2 and
+        T1.CRT_TYPE &lt;&gt; 2 and
+        T1.CRT_TYPE &lt;&gt; 7 and
+        T1.COLL_ID &gt; @collId and
+        T1.OTR_TYPE = 'DE' and
+        T1.CPA_TYPE = 'R'
+  ) S1
+  outer apply
+  (
+    select top(1)
+      T1.COLLECTION_TYPE_ID,
+      T1.CODE
+    from
+      CKT_COLLTN_TYPE T1
+    where exists
+    (
+      select
+        *
+      from
+        CKT_CR_DETAIL T2
+      where
+        T1.COLLECTION_TYPE_ID = T2.CLT_IDENTIFIER and
+        T2.CRD_ID = S1.CRD_ID and
+        T2.CRV_IDENTIFIER = S1.CRV_ID and
+        T2.CST_IDENTIFIER = S1.CST_ID and
+        T2.CRT_IDENTIFIER = S1.CRT_TYPE
+    )
+  ) S2
+order by
+  S1.COLL_ID
+</value>
+   </data>
+   <data name="ReadCsePerson">
+      <value>
+select
+  T1.NUMB
+from
+  CKT_CSE_PERSON T1 with(readuncommitted)
+where exists
+(
+  select
+    *
+  from
+    CKT_OB_TRN T3 with(readuncommitted)
+  where
+    T1.NUMB = T3.CSP_SUP_NUMBER and
+    T3.OTY_TYPE = @otyType and
+    T3.OB_TRN_TYP = @obTrnTyp and
+    T3.OB_TRN_ID = @obTrnId and
+    T3.CPA_TYPE = @cpaType and
+    T3.CSP_NUMBER = @cspNumber and
+    T3.OBG_GENERATED_ID = @obgGeneratedId and
+    T3.CPA_SUP_TYPE = 'S' and
+    T3.OB_TRN_TYP = 'DE'
+)
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  CASELOAD_COUNT
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  (REPORT_LEVEL in ('AT', 'CA', 'CW'))
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  CASELOAD_COUNT
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority3">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  CASELOAD_COUNT
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  (REPORT_LEVEL in ('AT', 'CW'))
+</value>
+   </data>
+   <data name="ReadLegalAction">
+      <value>
+select
+  T1.LEGAL_ACTION_ID,
+  T1.STANDARD_NO,
+  T1.TRB_ID
+from
+  CKT_LEGAL_ACTION T1
+where
+  cast(@otrType as char(2)) = 'DE' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OBLIGATION T3
+    where
+      T1.LEGAL_ACTION_ID = T3.LGA_IDENTIFIER and
+      T3.LAD_NUMBER is not null and
+      T3.DTY_GENERATED_ID = @dtyGeneratedId and
+      T3.OB_ID = @obId and
+      T3.CSP_NUMBER = @cspNumber and
+      T3.CPA_TYPE = @cpaType
+  )
+</value>
+   </data>
+   <data name="ReadLegalActionDetail">
+      <value>
+select
+  T1.LGA_IDENTIFIER,
+  T1.LA_DETAIL_NO,
+  T1.DETAIL_TYPE
+from
+  CKT_LEGAL_ACT_DTL T1 with(readuncommitted)
+where
+  cast(@otrType as char(2)) = 'DE' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OBLIGATION T2 with(readuncommitted)
+    where
+      T1.LA_DETAIL_NO = T2.LAD_NUMBER and
+      T1.LGA_IDENTIFIER = T2.LGA_IDENTIFIER and
+      T2.DTY_GENERATED_ID = @dtyGeneratedId and
+      T2.OB_ID = @obId and
+      T2.CSP_NUMBER = @cspNumber and
+      T2.CPA_TYPE = @cpaType
+  )
+</value>
+   </data>
+   <data name="ReadLegalActionLegalActionAssigmentServiceProvider">
+      <value>
+select
+  T1.LEGAL_ACTION_ID,
+  T1.STANDARD_NO,
+  T1.TRB_ID,
+  T2.OSP_EFFECTIVE_DATE,
+  T2.OSP_ROLE_CODE,
+  T2.OFF_GENERATED_ID,
+  T2.SPD_GENERATED_ID,
+  T2.EFFECTIVE_DT,
+  T2.END_DT,
+  T2.CREATED_TIMESTAMP,
+  T3.SERVICE_PRVDER_ID,
+  T3.USER_ID,
+  T3.ROLE_CODE
+from
+  CKT_SERVICE_PRVDER T3
+  join
+  CKT_LEGAL_ACTION T1
+  join
+  CKT_LA_SERV_PROV T2
+  on
+    T1.STANDARD_NO = @standardNo and
+    T1.LEGAL_ACTION_ID = T2.LGA_IDENTIFIER and
+    T2.EFFECTIVE_DT &lt;= @effectiveDt and
+    T2.END_DT &gt;= @endDt and
+    T2.OSP_ROLE_CODE is not null and
+    T2.OSP_EFFECTIVE_DATE is not null and
+    T2.OFF_GENERATED_ID is not null
+  on
+    T3.SERVICE_PRVDER_ID = T2.SPD_GENERATED_ID
+order by
+  T2.EFFECTIVE_DT desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  S_TYPE_COLL_AMT = @STypeCollAmt,
+  S_TYPE_COLL_PER = @STypeCollPer,
+  F_TYPE_COLL_AMT = @FTypeCollAmt,
+  F_TYPE_COLL_PER = @FTypeCollPer,
+  I_TYPE_COLL_AMT = @ITypeCollAmt,
+  I_TYPE_COLL_PER = @ITypeCollPer,
+  U_TYPE_COLL_AMT = @UTypeCollAmt,
+  U_TYPE_COLL_PER = @UTypeCollPer,
+  C_TYPE_COLL_AMT = @CTypeCollAmt,
+  C_TYPE_COLL_PER = @CTypeCollPer,
+  TOTAL_COLL_AMT = @totalCollAmt
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  AS_OF_DATE = @asOfDate,
+  S_TYPE_COLL_AMT = @STypeCollAmt,
+  F_TYPE_COLL_AMT = @FTypeCollAmt,
+  I_TYPE_COLL_AMT = @ITypeCollAmt,
+  U_TYPE_COLL_AMT = @UTypeCollAmt,
+  C_TYPE_COLL_AMT = @CTypeCollAmt,
+  TOTAL_COLL_AMT = @totalCollAmt
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority3">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  S_TYPE_COLL_PER = @STypeCollPer,
+  F_TYPE_COLL_PER = @FTypeCollPer,
+  I_TYPE_COLL_PER = @ITypeCollPer,
+  U_TYPE_COLL_PER = @UTypeCollPer,
+  C_TYPE_COLL_PER = @CTypeCollPer
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

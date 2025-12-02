@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority35">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @caseReviews,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="ReadCaseAssignment">
+      <value>
+select
+  EFFECTIVE_DATE,
+  DISCONTINUE_DATE,
+  CREATED_TIMESTAMP,
+  SPD_ID,
+  OFF_ID,
+  OSP_CODE,
+  OSP_DATE,
+  CAS_NO
+from
+  CKT_ASSIGN_CASE
+where
+  EFFECTIVE_DATE &lt;= @effectiveDate and
+  DISCONTINUE_DATE &gt;= @discontinueDate and
+  @spdId = SPD_ID
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CASE_REVIEWS
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'CW'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CASE_REVIEWS
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadInfrastructureCase">
+      <value>
+select
+  *
+from
+  (
+    select
+      SYSTEM_GENERATED_I,
+      EVENT_ID,
+      REASON_CODE,
+      CASE_NUMBER,
+      CREATED_BY,
+      CREATED_TIMESTAMP,
+      REFERENCE_DATE
+    from
+      CKT_INFRASTRUCTURE
+    where
+      EVENT_ID = 5 and
+      CREATED_TIMESTAMP &lt; @createdTimestamp and
+      REASON_CODE = 'OSPRVWS' and
+      (REFERENCE_DATE between cast(@date1 as date) and cast(@date2 as date))
+  ) S1
+  outer apply
+  (
+    select top(1)
+      NUMB,
+      STATUS,
+      STATUS_DATE,
+      CREATED_TIMESTAMP,
+      INTERSTATE_CASE_ID,
+      NO_JURISDICTION_CD
+    from
+      CKT_CASE
+    where
+      NUMB = S1.CASE_NUMBER
+  ) S2
+order by
+  S1.CREATED_TIMESTAMP desc
+</value>
+   </data>
+   <data name="ReadServiceProviderOfficeServiceProvider">
+      <value>
+select
+  T1.SERVICE_PRVDER_ID,
+  T1.USER_ID,
+  T2.OFF_GENERATED_ID,
+  T2.ROLE_CODE,
+  T2.EFFECTIVE_DATE,
+  T2.DISCONTINUE_DATE
+from
+  CKT_SERVICE_PRVDER T1
+  join
+  CKT_OFFC_SRVC_PRVR T2
+  on
+    T1.USER_ID = @userId and
+    T1.SERVICE_PRVDER_ID = T2.SPD_GENERATED_ID and
+    T2.ROLE_CODE = 'CO' and
+    T2.EFFECTIVE_DATE &lt;= @effectiveDate
+order by
+  T2.EFFECTIVE_DATE desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CASE_REVIEWS = @caseReviews
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  AS_OF_DATE = @asOfDate,
+  CASE_REVIEWS = @caseReviews
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>
