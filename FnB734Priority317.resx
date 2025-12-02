@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority35">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @refAge60To90,
+  @refAge91To120,
+  @refAge121To150,
+  @refAge151Plus,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="ReadCaseAssignment">
+      <value>
+select
+  DISCONTINUE_DATE,
+  CREATED_TIMESTAMP,
+  SPD_ID,
+  OFF_ID,
+  OSP_CODE,
+  OSP_DATE,
+  CAS_NO
+from
+  CKT_ASSIGN_CASE
+where
+  @casNo = CAS_NO
+order by
+  DISCONTINUE_DATE desc
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN
+where
+  TYPE_CODE = 'J'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS
+from
+  CKT_DB_STAGE_PRI35
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadLegalReferralCase">
+      <value>
+select
+  T1.CAS_NUMBER,
+  T1.IDENTIFIER,
+  T1.STATUS_DATE,
+  T1.STATUS,
+  T1.CREATED_TIMESTAMP,
+  T1.REFERRAL_REASON_1,
+  T1.REFERRAL_REASON_2,
+  T1.REFERRAL_REASON_3,
+  T1.REFERRAL_REASON_4,
+  T2.NO_JURISDICTION_CD
+from
+  CKT_CASE T2 with(readuncommitted)
+  join
+  CKT_LEGAL_REFERRAL T1 with(readuncommitted)
+  on
+    T2.NUMB = T1.CAS_NUMBER and
+    T1.CREATED_TIMESTAMP &lt; @createdTimestamp1 and
+    (
+      (T1.STATUS in ('O', 'S')) and
+      T1.STATUS_DATE &lt;= @statusDate or
+      (T1.STATUS in ('W', 'C', 'R')) and
+      T1.STATUS_DATE &gt;= @statusDate and
+      T1.CREATED_TIMESTAMP &lt;= @createdTimestamp2
+    )
+order by
+  T1.CREATED_TIMESTAMP desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority35">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  AS_OF_DATE = @asOfDate,
+  REF_AGE_60_TO_90 = @refAge60To90,
+  REF_AGE_91_TO_120 = @refAge91To120,
+  REF_AGE_121_TO_150 = @refAge121To150,
+  REF_AGE_151_PLUS = @refAge151Plus
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

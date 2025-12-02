@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority35">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @iwIssued,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  IW_ISSUED
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  (REPORT_LEVEL in ('AT', 'CA'))
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  IW_ISSUED
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadLegalActionAssigmentServiceProvider">
+      <value>
+select
+  T1.LGA_IDENTIFIER,
+  T1.OSP_EFFECTIVE_DATE,
+  T1.OSP_ROLE_CODE,
+  T1.OFF_GENERATED_ID,
+  T1.SPD_GENERATED_ID,
+  T1.EFFECTIVE_DT,
+  T1.END_DT,
+  T1.REASON_CODE,
+  T1.CREATED_TIMESTAMP,
+  T2.SERVICE_PRVDER_ID,
+  T2.USER_ID,
+  T2.ROLE_CODE
+from
+  CKT_SERVICE_PRVDER T2
+  join
+  CKT_LA_SERV_PROV T1
+  on
+    @lgaIdentifier = T1.LGA_IDENTIFIER and
+    T1.EFFECTIVE_DT &lt;= cast(@createdTstamp as date) and
+    T1.END_DT &gt;= cast(@createdTstamp as date) and
+    T1.OSP_ROLE_CODE is not null and
+    T1.OSP_EFFECTIVE_DATE is not null and
+    T1.OFF_GENERATED_ID is not null and
+    T2.SERVICE_PRVDER_ID = T1.SPD_GENERATED_ID
+order by
+  T1.EFFECTIVE_DT desc
+</value>
+   </data>
+   <data name="ReadLegalActionFipsTribunal">
+      <value>
+select
+  *
+from
+  (
+    select
+      LEGAL_ACTION_ID,
+      CLASSIFICATION,
+      ACTION_TAKEN,
+      TYPE,
+      FILED_DT,
+      COURT_CASE_NO,
+      END_DT,
+      STANDARD_NO,
+      CREATED_TSTAMP,
+      TRB_ID
+    from
+      CKT_LEGAL_ACTION
+    where
+      (CREATED_TSTAMP between cast(@timestamp1 as datetime2) and cast(@timestamp2 as datetime2)) and
+      CREATED_TSTAMP &lt; @createdTstamp and
+      CLASSIFICATION = 'I' and
+      (ACTION_TAKEN in ('ORDIWO2', 'ORDIWO2A', 'ORDIWO2B'))
+  ) S1
+  cross apply
+  (
+    select top(1)
+      T1.[STATE],
+      T1.COUNTY,
+      T1.LOCATION,
+      T1.COUNTY_DESC,
+      T1.STATE_ABBREVIATION,
+      T2.TRIBUNAL_NM,
+      T2.JUDICIAL_DISTRICT,
+      T2.IDENTIFIER
+    from
+      CKT_FIPS T1
+      join
+      CKT_TRIBUNAL T2
+      on
+        T2.IDENTIFIER = S1.TRB_ID and
+        T1.LOCATION = T2.FIP_LOCATION and
+        T1.COUNTY = T2.FIP_COUNTY and
+        T1.[STATE] = T2.FIP_STATE and
+        T1.COUNTY &gt; 0
+  ) S2
+order by
+  S1.CREATED_TSTAMP desc
+</value>
+   </data>
+   <data name="ReadLegalActionIncomeSourceCsePerson">
+      <value>
+select
+  T1.CSP_NUMBER,
+  T1.LGA_IDENTIFIER,
+  T1.ISR_IDENTIFIER,
+  T1.EFFECTIVE_DT,
+  T1.CREATED_TSTAMP,
+  T1.WITHHOLDING_TYPE,
+  T1.END_DT,
+  T1.WAGE_OR_NON_WAGE,
+  T1.ORDER_TYPE,
+  T1.IDENTIFIER
+from
+  CKT_LEGAL_ACT_ISRC T1
+where
+  @lgaIdentifier = T1.LGA_IDENTIFIER and
+  exists
+  (
+    select
+      *
+    from
+      CKT_INCOME_SOURCE T3
+    where
+      T3.CSP_I_NUMBER = T1.CSP_NUMBER and
+      T3.IDENTIFIER = T1.ISR_IDENTIFIER and
+      T3.EMP_ID is not null and
+      T3.TYPE = 'E'
+  )
+order by
+  T1.END_DT desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  IW_ISSUED = @iwIssued
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  AS_OF_DATE = @asOfDate,
+  IW_ISSUED = @iwIssued
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

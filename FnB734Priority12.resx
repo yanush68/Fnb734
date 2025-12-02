@@ -1,0 +1,1099 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority1">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepNum,
+  @pepDen,
+  @pepPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepRank,
+  @contractorNum,
+  @prvYrPepNumtr,
+  @prvYrPepDenom,
+  @prvYrPepPct,
+  @pctChgByrPep,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority2">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepNum,
+  @pepDen,
+  @pepPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepRank,
+  @contractorNum,
+  @prvYrPepNumtr,
+  @prvYrPepDenom,
+  @prvYrPepPct,
+  @pctChgByrPep,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority3">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepNum,
+  @pepDen,
+  @pepPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @pepRank,
+  @contractorNum,
+  @prvYrPepNumtr,
+  @prvYrPepDenom,
+  @prvYrPepPct,
+  @pctChgByrPep,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer
+)
+</value>
+   </data>
+   <data name="ReadCaseAssignment1">
+      <value>
+select
+  EFFECTIVE_DATE,
+  DISCONTINUE_DATE,
+  CREATED_TIMESTAMP,
+  SPD_ID,
+  OFF_ID,
+  OSP_CODE,
+  OSP_DATE,
+  CAS_NO
+from
+  CKT_ASSIGN_CASE with(readuncommitted)
+where
+  @casNo = CAS_NO and
+  EFFECTIVE_DATE &lt;= @effectiveDate and
+  DISCONTINUE_DATE &gt;= @discontinueDate
+order by
+  EFFECTIVE_DATE desc
+</value>
+   </data>
+   <data name="ReadCaseAssignment2">
+      <value>
+select
+  EFFECTIVE_DATE,
+  DISCONTINUE_DATE,
+  CREATED_TIMESTAMP,
+  SPD_ID,
+  OFF_ID,
+  OSP_CODE,
+  OSP_DATE,
+  CAS_NO
+from
+  CKT_ASSIGN_CASE with(readuncommitted)
+where
+  @casNo = CAS_NO and
+  EFFECTIVE_DATE &lt;= @effectiveDate and
+  DISCONTINUE_DATE &gt;= @discontinueDate
+order by
+  EFFECTIVE_DATE desc
+</value>
+   </data>
+   <data name="ReadCaseRoleCase1">
+      <value>
+select
+  T1.CAS_NUMBER,
+  T1.CSP_NUMBER,
+  T1.TYPE,
+  T1.CASE_ROLE_ID,
+  T1.START_DATE,
+  T1.END_DATE,
+  T1.EMANCIPATION_DT,
+  T2.INTERSTATE_CASE_ID,
+  T2.NO_JURISDICTION_CD
+from
+  CKT_CASE T2 with(readuncommitted)
+  join
+  CKT_CASE_ROLE T1 with(readuncommitted)
+  on
+    @cspNumber = T1.CSP_NUMBER and
+    T2.NUMB = T1.CAS_NUMBER and
+    T1.TYPE = 'CH' and
+    T1.START_DATE &lt;= @startDate and
+    T1.END_DATE &gt;= @endDate
+</value>
+   </data>
+   <data name="ReadCaseRoleCase2">
+      <value>
+select
+  T1.CAS_NUMBER,
+  T1.CSP_NUMBER,
+  T1.TYPE,
+  T1.CASE_ROLE_ID,
+  T1.START_DATE,
+  T1.END_DATE,
+  T1.EMANCIPATION_DT,
+  T2.INTERSTATE_CASE_ID,
+  T2.NO_JURISDICTION_CD
+from
+  CKT_CASE T2 with(readuncommitted)
+  join
+  CKT_CASE_ROLE T1 with(readuncommitted)
+  on
+    @cspNumber = T1.CSP_NUMBER and
+    T2.NUMB = T1.CAS_NUMBER and
+    T1.TYPE = 'CH' and
+    T1.START_DATE &lt;= @startDate and
+    T1.END_DATE &gt;= @endDate
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN with(readuncommitted)
+where
+  TYPE_CODE = 'J'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadCsePerson">
+      <value>
+select distinct
+  T1.NUMB,
+  T1.TYPE,
+  T1.OUT_OF_WEDLOCK,
+  T1.PAT_ESTAB_IND
+from
+  CKT_CSE_PERSON T1 with(readuncommitted)
+where
+  T1.PAT_ESTAB_IND = 'Y' and
+  T1.OUT_OF_WEDLOCK = 'Y' and
+  T1.NUMB &gt; @numb and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+    where
+      T1.NUMB = T2.CSP_NUMBER and
+      T2.TYPE = 'CH' and
+      T2.START_DATE &lt;= @startDate and
+      T2.END_DATE &gt;= @endDate
+  )
+order by
+  T1.NUMB
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'ST' and
+  REPORT_LEVEL_ID = 'KS'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority10">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'XJ'
+order by
+  PEP_PER desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority3">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority4">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority5">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority6">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority7">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority8">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId and
+  REPORT_MONTH = @reportMonth
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority9">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+order by
+  PEP_PER desc
+</value>
+   </data>
+   <data name="ReadGoodCauseCaseRoleGoodCause1">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.CODE,
+      T1.EFFECTIVE_DATE,
+      T1.DISCONTINUE_DATE,
+      T1.CREATED_TIMESTAMP,
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.CRO_TYPE,
+      T1.CRO_IDENTIFIER,
+      T2.START_DATE,
+      T2.END_DATE
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+      join
+      CKT_GOOD_CAUSE T1 with(readuncommitted)
+      on
+        T1.CODE = 'GC' and
+        T2.CAS_NUMBER = T1.CAS_NUMBER and
+        T2.CSP_NUMBER = T1.CSP_NUMBER and
+        T2.TYPE = T1.CRO_TYPE and
+        T2.CASE_ROLE_ID = T1.CRO_IDENTIFIER and
+        T2.TYPE = 'AR' and
+        @casNumber = T2.CAS_NUMBER and
+        T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+        T1.DISCONTINUE_DATE &gt;= @effectiveDate and
+        T2.START_DATE &lt;= @effectiveDate and
+        T2.END_DATE &gt;= @effectiveDate
+  ) S1
+  outer apply
+  (
+    select top(1)
+      CODE,
+      EFFECTIVE_DATE,
+      DISCONTINUE_DATE,
+      CREATED_TIMESTAMP,
+      CAS_NUMBER,
+      CSP_NUMBER,
+      CRO_TYPE,
+      CRO_IDENTIFIER
+    from
+      CKT_GOOD_CAUSE
+    where
+      S1.CAS_NUMBER = CAS_NUMBER and
+      S1.CSP_NUMBER = CSP_NUMBER and
+      S1.CRO_TYPE = CRO_TYPE and
+      S1.CRO_IDENTIFIER = CRO_IDENTIFIER and
+      CODE = 'CO' and
+      CREATED_TIMESTAMP &gt; S1.CREATED_TIMESTAMP and
+      CREATED_TIMESTAMP &lt; @createdTimestamp
+  ) S2
+</value>
+   </data>
+   <data name="ReadGoodCauseCaseRoleGoodCause2">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.CODE,
+      T1.EFFECTIVE_DATE,
+      T1.DISCONTINUE_DATE,
+      T1.CREATED_TIMESTAMP,
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.CRO_TYPE,
+      T1.CRO_IDENTIFIER,
+      T2.START_DATE,
+      T2.END_DATE
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+      join
+      CKT_GOOD_CAUSE T1 with(readuncommitted)
+      on
+        T1.CODE = 'GC' and
+        T2.CAS_NUMBER = T1.CAS_NUMBER and
+        T2.CSP_NUMBER = T1.CSP_NUMBER and
+        T2.TYPE = T1.CRO_TYPE and
+        T2.CASE_ROLE_ID = T1.CRO_IDENTIFIER and
+        T2.TYPE = 'AR' and
+        @casNumber = T2.CAS_NUMBER and
+        T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+        T1.DISCONTINUE_DATE &gt;= @effectiveDate and
+        T2.START_DATE &lt;= @effectiveDate and
+        T2.END_DATE &gt;= @effectiveDate
+  ) S1
+  outer apply
+  (
+    select top(1)
+      CODE,
+      EFFECTIVE_DATE,
+      DISCONTINUE_DATE,
+      CREATED_TIMESTAMP,
+      CAS_NUMBER,
+      CSP_NUMBER,
+      CRO_TYPE,
+      CRO_IDENTIFIER
+    from
+      CKT_GOOD_CAUSE
+    where
+      S1.CAS_NUMBER = CAS_NUMBER and
+      S1.CSP_NUMBER = CSP_NUMBER and
+      S1.CRO_TYPE = CRO_TYPE and
+      S1.CRO_IDENTIFIER = CRO_IDENTIFIER and
+      CODE = 'CO' and
+      CREATED_TIMESTAMP &gt; S1.CREATED_TIMESTAMP and
+      CREATED_TIMESTAMP &lt; @createdTimestamp
+  ) S2
+</value>
+   </data>
+   <data name="ReadOcse157Data">
+      <value>
+select
+  FISCAL_YEAR,
+  RUN_NUMBER,
+  LINE_NUMBER,
+  CREATED_TIMESTAMP,
+  NUMBER
+from
+  CKT_OCSE157_DATA
+where
+  FISCAL_YEAR = @fiscalYear and
+  LINE_NUMBER = @lineNumber
+order by
+  RUN_NUMBER desc
+</value>
+   </data>
+   <data name="ReadOcse157VerificationCsePerson">
+      <value>
+select
+  *
+from
+  (
+    select
+      FISCAL_YEAR,
+      RUN_NUMBER,
+      LINE_NUMBER,
+      CREATED_TIMESTAMP,
+      SUPP_PERSON_NUMBER
+    from
+      CKT_OCSE157_VERIFI with(readuncommitted)
+    where
+      FISCAL_YEAR = @fiscalYear and
+      RUN_NUMBER = @runNumber and
+      LINE_NUMBER = @lineNumber and
+      SUPP_PERSON_NUMBER &gt; @suppPersonNumber
+  ) S1
+  cross apply
+  (
+    select top(1)
+      NUMB,
+      TYPE,
+      OUT_OF_WEDLOCK,
+      PAT_ESTAB_IND
+    from
+      CKT_CSE_PERSON
+    where
+      NUMB = S1.SUPP_PERSON_NUMBER
+  ) S2
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  PEP_NUM = @pepNum,
+  PEP_DEN = @pepDen,
+  PEP_PER = @pepPer,
+  PEP_RANK = @pepRank
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  PEP_NUM = @pepNum,
+  PEP_DEN = @pepDen,
+  PEP_PER = @pepPer,
+  PEP_RANK = @pepRank
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority3">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  PEP_NUM = @pepNum,
+  PEP_DEN = @pepDen,
+  PEP_PER = @pepPer,
+  PEP_RANK = @pepRank,
+  PRV_YR_PEP_NUMTR = @prvYrPepNumtr,
+  PRV_YR_PEP_DENOM = @prvYrPepDenom,
+  PRV_YR_PEP_PCT = @prvYrPepPct,
+  PCT_CHG_BYR_PEP = @pctChgByrPep
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority4">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  PEP_PER = @pepPer,
+  PRV_YR_PEP_NUMTR = @prvYrPepNumtr,
+  PRV_YR_PEP_DENOM = @prvYrPepDenom,
+  PRV_YR_PEP_PCT = @prvYrPepPct,
+  PCT_CHG_BYR_PEP = @pctChgByrPep
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority5">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  PEP_RANK = @pepRank
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

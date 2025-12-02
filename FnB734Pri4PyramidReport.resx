@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardPyramid">
+      <value>
+insert into CKT_DB_PYRAMID
+(
+  REPORT_MONTH,
+  RUN_NUMBER,
+  AS_OF_DATE,
+  TOTAL_CASES,
+  CS_CASES,
+  PAYING_CASES,
+  NOPAY_CASES,
+  NOPAY_NOADDEMP,
+  NOPAY_ADD,
+  NOPAY_ADD_V,
+  NOPAY_ADD_NV,
+  NOPAY_EMP,
+  NOPAY_EMP_V,
+  NOPAY_EMP_NV,
+  NOPAY_ADD_EMP,
+  NOPAY_ADD_EMP_V,
+  NOPAY_ADD_EMP_NV,
+  NON_CS_OB_CASES,
+  NOOB_CASES,
+  NOOB_PAT,
+  NOOB_PAT_NOADDEMP,
+  NOOB_PAT_ADD,
+  NOOB_PAT_ADD_V,
+  NOOB_PAT_ADD_NV,
+  NOOB_PAT_EMP,
+  NOOB_PAT_EMP_V,
+  NOOB_PAT_EMP_NV,
+  NOOB_PAT_ADDEMP,
+  NOOB_PAT_ADDEMP_V,
+  NOOB_PAT_ADDEMP_NV,
+  NOOB_NOPAT,
+  NOOB_NOPAT_NOADDEM,
+  NOOB_NOPAT_ADD,
+  NOOB_NOPAT_ADD_V,
+  NOOB_NOPAT_ADD_NV,
+  NOOB_NOPAT_EMP,
+  NOOB_NOPAT_EMP_V,
+  NOOB_NOPAT_EMP_NV,
+  NOOB_NOPAT_ADEM,
+  NOOB_NOPAT_ADEM_V,
+  NOOB_NOPAT_ADEM_NV
+)
+values
+(
+  @reportMonth,
+  @runNumber,
+  @asOfDate,
+  @totalCases,
+  @csCases,
+  @payingCases,
+  @nopayCases,
+  @nopayNoaddemp,
+  @nopayAdd,
+  @nopayAddV,
+  @nopayAddNv,
+  @nopayEmp,
+  @nopayEmpV,
+  @nopayEmpNv,
+  @nopayAddEmp,
+  @nopayAddEmpV,
+  @nopayAddEmpNv,
+  @nonCsObCases,
+  @noobCases,
+  @noobPat,
+  @noobPatNoaddemp,
+  @noobPatAdd,
+  @noobPatAddV,
+  @noobPatAddNv,
+  @noobPatEmp,
+  @noobPatEmpV,
+  @noobPatEmpNv,
+  @noobPatAddemp,
+  @noobPatAddempV,
+  @noobPatAddempNv,
+  @noobNopat,
+  @noobNopatNoaddem,
+  @noobNopatAdd,
+  @noobNopatAddV,
+  @noobNopatAddNv,
+  @noobNopatEmp,
+  @noobNopatEmpV,
+  @noobNopatEmpNv,
+  @noobNopatAdem,
+  @noobNopatAdemV,
+  @noobNopatAdemNv
+)
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority4">
+      <value>
+select
+  REPORT_MONTH,
+  RUN_NUMBER,
+  CASE_NUMBER,
+  AS_OF_DATE,
+  CURRENT_CS_IND,
+  OTHER_OBG_IND,
+  CS_DUE_AMT,
+  CS_COLLECTED_AMT,
+  PAYING_CASE_IND,
+  PATERNITY_EST_IND,
+  ADDRESS_VER_IND,
+  EMPLOYER_VER_IND
+from
+  CKT_DB_STAGE_PRI_4 with(readuncommitted)
+where
+  REPORT_MONTH = cast(@reportMonth as integer) and
+  RUN_NUMBER = @runNumber
+order by
+  CASE_NUMBER
+</value>
+   </data>
+</root>

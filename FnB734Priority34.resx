@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority35">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @paternitiesEst,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN
+where
+  TYPE_CODE = 'J'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadCsePerson">
+      <value>
+select
+  T1.NUMB
+from
+  CKT_CSE_PERSON T1
+where exists
+(
+  select
+    *
+  from
+    CKT_LEGAL_ACT_PERS T2
+  where
+    T1.NUMB = T2.CSP_NUMBER and
+    T2.ACCOUNT_TYPE = 'S' and
+    @ladRNumber = T2.LAD_R_NUMBER and
+    @lgaRIdentifier = T2.LGA_R_IDENTIFIER and
+    T2.END_DT &gt; @endDt
+)
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  PATERNITIES_EST
+from
+  CKT_DB_STAGE_PRI35
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  PATERNITIES_EST
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadLegalActionLaDetNonfinancialFipsTribunal">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.LEGAL_ACTION_ID,
+      T1.CLASSIFICATION,
+      T1.FILED_DT,
+      T1.STANDARD_NO,
+      T1.ESTABLISHMENT_CD,
+      T1.TRB_ID,
+      T2.LA_DETAIL_NO,
+      T2.NON_FIN_OBLG_TYPE,
+      T2.DETAIL_TYPE
+    from
+      CKT_LEGAL_ACTION T1
+      join
+      CKT_LEGAL_ACT_DTL T2
+      on
+        (T1.FILED_DT between cast(@date1 as date) and cast(@date2 as date)) and
+        T1.STANDARD_NO &gt; @standardNo and
+        (T1.ESTABLISHMENT_CD in ('CS', 'CT')) and
+        T1.CLASSIFICATION = 'J' and
+        T1.LEGAL_ACTION_ID = T2.LGA_IDENTIFIER and
+        T2.NON_FIN_OBLG_TYPE = 'EP' and
+        T2.DETAIL_TYPE = 'N'
+  ) S1
+  cross apply
+  (
+    select top(1)
+      FIP_STATE,
+      FIP_COUNTY,
+      FIP_LOCATION,
+      TRIBUNAL_NM,
+      JUDICIAL_DISTRICT,
+      IDENTIFIER
+    from
+      CKT_TRIBUNAL
+    where
+      IDENTIFIER = S1.TRB_ID and
+      FIP_LOCATION is not null and
+      FIP_COUNTY is not null and
+      FIP_STATE is not null and
+      FIP_COUNTY &gt; 0
+  ) S2
+order by
+  S1.STANDARD_NO,
+  S1.FILED_DT
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority35">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  AS_OF_DATE = @asOfDate,
+  PATERNITIES_EST = @paternitiesEst
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

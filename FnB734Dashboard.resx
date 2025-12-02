@@ -1,0 +1,790 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardName1">
+      <value>
+insert into CKT_DB_NAME
+(
+  PROVIDER_ID,
+  PROVIDER_TYPE,
+  ORG_OR_LAST_NAME,
+  FIRST_NAME,
+  MIDDLE_INITIAL
+)
+values
+(
+  @providerId,
+  @providerType,
+  @orgOrLastName,
+  @firstName,
+  @middleInitial
+)
+</value>
+   </data>
+   <data name="CreateDashboardName2">
+      <value>
+insert into CKT_DB_NAME
+(
+  PROVIDER_ID,
+  PROVIDER_TYPE,
+  ORG_OR_LAST_NAME,
+  FIRST_NAME,
+  MIDDLE_INITIAL
+)
+values
+(
+  @providerId,
+  @providerType,
+  @orgOrLastName,
+  @firstName,
+  @middleInitial
+)
+</value>
+   </data>
+   <data name="CreateDashboardOutputMetrics">
+      <value>
+insert into CKT_DB_OUTPUT_MTRX
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  TYPE,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @type,
+  @asOfDate,
+  @casWEstRef,
+  @casWEnfRef,
+  @fullTimeEqvlnt,
+  @newOrdEst,
+  @paternitiesEst,
+  @casesOpnWOrder,
+  @casesOpnWoOrder,
+  @casesClsWOrder,
+  @casesClsWoOrder,
+  @modifications,
+  @iwIssued,
+  @cntmptMtnFiled,
+  @cntmptOrdFiled,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @FTypeCollAmt,
+  @FTypeCollPer,
+  @ITypeCollAmt,
+  @ITypeCollPer,
+  @UTypeCollAmt,
+  @UTypeCollPer,
+  @CTypeCollAmt,
+  @CTypeCollPer,
+  @totalCollAmt,
+  @ordEstDaysNmr,
+  @ordEstDaysDnom,
+  @ordEstDaysAvg,
+  @retServDaysNmr,
+  @retSrvDaysDnom,
+  @retServDaysAvg,
+  @refAge60To90,
+  @refAge91To120,
+  @refAge121To150,
+  @refAge151Plus,
+  @iwoPmtDaysNmr,
+  @iwoPmtDaysDnom,
+  @iwoPmtDaysAvg,
+  @estRefToLegal,
+  @enfRefToLegal,
+  @caseloadCount,
+  @casesOpened,
+  @ncpLocByAdrss,
+  @ncpLocByEmp,
+  @caseClosures,
+  @caseReviews,
+  @petitions,
+  @casPayingArrDen,
+  @casPayingArrNum,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @curSupPdYtdDen,
+  @curSupPdYtdNum,
+  @curSupPdYtdPer,
+  @curSupPdYtdRnk,
+  @curSupPdMthDen,
+  @curSupPdMthNum,
+  @curSupPdMthPer,
+  @curSupPdMthRnk
+)
+</value>
+   </data>
+   <data name="CreateDashboardPerformanceMetrics">
+      <value>
+insert into CKT_DB_PRFORM_MTRX
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  TYPE,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PERT,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @type,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdDen,
+  @casUnderOrdPert,
+  @casUnderOrdRnk,
+  @pepNum,
+  @pepDen,
+  @pepPer,
+  @casPayingArrNum,
+  @casPayingArrDen,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @curSupPdMthNum,
+  @curSupPdMthDen,
+  @curSupPdMthPer,
+  @curSupPdMthRnk,
+  @curSupPdYtdNum,
+  @curSupPdYtdDen,
+  @curSupPdYtdPer,
+  @curSupPdYtdRnk,
+  @collYtdToPriMo,
+  @collYtdAct,
+  @collYtdPriYr,
+  @collYtdPerChg,
+  @collYtdRnk,
+  @collInMthAct,
+  @collInMthPriYr,
+  @collInMthPerCh,
+  @collInMthRnk,
+  @arrDistMthAct,
+  @arrDistMthRnk,
+  @arrDistYtdAct,
+  @arrDistYtdRnk,
+  @arrDueAct,
+  @arrDueRnk,
+  @collOblCasNum,
+  @collOblCasDen,
+  @collOblCasAvg,
+  @collOblCasRnk,
+  @iwoOblCasNum,
+  @iwoOblCasDen,
+  @iwoOblCasAvg,
+  @iwoOblCasRnk,
+  @casPerFteNum,
+  @casPerFteDen,
+  @casPerFteAvg,
+  @casPerFteRnk,
+  @collPerFteNum,
+  @collPerFteDen,
+  @collPerFteAvg,
+  @collPerFteRnk,
+  @casPayingNum,
+  @casPayingDen,
+  @casPayingPer,
+  @casPayingRnk,
+  @pepRank,
+  @contractorNum,
+  @prvYrPepNumtr,
+  @prvYrPepDenom,
+  @prvYrPepPct,
+  @pctChgByrPep,
+  @prvYrCaseNumtr,
+  @prvYrCaseDenom,
+  @prvYrCasPctUo,
+  @pctChgByrCasUo,
+  @pvYrSupPdNumtr,
+  @pvYrSupPdDenom,
+  @prvYrCSPdPct,
+  @pctChgByrCsPd,
+  @prvYrPdArNumtr,
+  @prvYrPdArDenom,
+  @payArPrvYrPct,
+  @pctChgByrArsPd
+)
+</value>
+   </data>
+   <data name="DeleteDashboardOutputMetrics">
+      <value>
+delete from CKT_DB_OUTPUT_MTRX
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId and
+  TYPE = @type
+</value>
+   </data>
+   <data name="DeleteDashboardPerformanceMetrics">
+      <value>
+delete from CKT_DB_PRFORM_MTRX
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId and
+  TYPE = @type
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE,
+  NAME
+from
+  CKT_CSE_ORGANIZATN
+where
+  TYPE_CODE = 'X'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadDashboardName1">
+      <value>
+select
+  PROVIDER_ID,
+  PROVIDER_TYPE,
+  ORG_OR_LAST_NAME,
+  FIRST_NAME,
+  MIDDLE_INITIAL
+from
+  CKT_DB_NAME with(xlock)
+where
+  PROVIDER_ID = @providerId and
+  PROVIDER_TYPE = 'SP'
+</value>
+   </data>
+   <data name="ReadDashboardName2">
+      <value>
+select
+  PROVIDER_ID,
+  PROVIDER_TYPE,
+  ORG_OR_LAST_NAME,
+  FIRST_NAME,
+  MIDDLE_INITIAL
+from
+  CKT_DB_NAME with(xlock)
+where
+  PROVIDER_ID = @providerId and
+  PROVIDER_TYPE = 'CX'
+</value>
+   </data>
+   <data name="ReadDashboardOutputMetrics">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  TYPE,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+from
+  CKT_DB_OUTPUT_MTRX with(xlock)
+where
+  TYPE = 'DATA'
+</value>
+   </data>
+   <data name="ReadDashboardPerformanceMetrics">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  TYPE,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PERT,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_PRFORM_MTRX with(xlock)
+where
+  TYPE = 'DATA'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority12">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority35">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+from
+  CKT_DB_STAGE_PRI35
+</value>
+   </data>
+   <data name="ReadProgramProcessingInfo">
+      <value>
+select
+  NAME,
+  CREATED_TIMESTAMP,
+  PARAMETER_LIST
+from
+  CKT_PGM_PRCSS_INFO with(xlock)
+where
+  NAME = @name and
+  CREATED_TIMESTAMP = @createdTimestamp
+</value>
+   </data>
+   <data name="ReadServiceProvider">
+      <value>
+select
+  SERVICE_PRVDER_ID,
+  USER_ID,
+  LAST_NAME,
+  FIRST_NAME,
+  MIDDLE_INITIAL
+from
+  CKT_SERVICE_PRVDER
+order by
+  SERVICE_PRVDER_ID
+</value>
+   </data>
+   <data name="UpdateDashboardName1">
+      <value>
+update CKT_DB_NAME
+set
+  ORG_OR_LAST_NAME = @orgOrLastName,
+  FIRST_NAME = @firstName,
+  MIDDLE_INITIAL = @middleInitial
+where
+  PROVIDER_ID = @providerId and
+  PROVIDER_TYPE = @providerType
+</value>
+   </data>
+   <data name="UpdateDashboardName2">
+      <value>
+update CKT_DB_NAME
+set
+  ORG_OR_LAST_NAME = @orgOrLastName,
+  FIRST_NAME = @firstName,
+  MIDDLE_INITIAL = @middleInitial
+where
+  PROVIDER_ID = @providerId and
+  PROVIDER_TYPE = @providerType
+</value>
+   </data>
+   <data name="UpdateProgramProcessingInfo">
+      <value>
+update CKT_PGM_PRCSS_INFO
+set
+  PARAMETER_LIST = @parameterList
+where
+  NAME = @name and
+  CREATED_TIMESTAMP = @createdTimestamp
+</value>
+   </data>
+</root>

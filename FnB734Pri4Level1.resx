@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority4">
+      <value>
+insert into CKT_DB_STAGE_PRI_4
+(
+  REPORT_MONTH,
+  RUN_NUMBER,
+  CASE_NUMBER,
+  AS_OF_DATE,
+  CURRENT_CS_IND,
+  OTHER_OBG_IND,
+  CS_DUE_AMT,
+  CS_COLLECTED_AMT,
+  PAYING_CASE_IND,
+  PATERNITY_EST_IND,
+  ADDRESS_VER_IND,
+  EMPLOYER_VER_IND,
+  WORKER_ID,
+  JUDICIAL_DISTRICT,
+  CONTRACTOR_NUM
+)
+values
+(
+  @reportMonth,
+  @runNumber,
+  @caseNumber,
+  @asOfDate,
+  @currentCsInd,
+  @otherObgInd,
+  @csDueAmt,
+  @csCollectedAmt,
+  @payingCaseInd,
+  @paternityEstInd,
+  @addressVerInd,
+  @employerVerInd,
+  @workerId,
+  @judicialDistrict,
+  @contractorNum
+)
+</value>
+   </data>
+   <data name="ReadCaseCaseAssignmentServiceProvider">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.NUMB,
+      T1.NO_JURISDICTION_CD,
+      T2.EFFECTIVE_DATE,
+      T2.DISCONTINUE_DATE,
+      T2.CREATED_TIMESTAMP,
+      T2.SPD_ID,
+      T2.OFF_ID,
+      T2.OSP_CODE,
+      T2.OSP_DATE
+    from
+      CKT_CASE T1 with(readuncommitted)
+      join
+      CKT_ASSIGN_CASE T2 with(readuncommitted)
+      on
+        T1.NO_JURISDICTION_CD = ' ' and
+        T1.NUMB = T2.CAS_NO and
+        T2.EFFECTIVE_DATE &lt;= @effectiveDate and
+        T2.DISCONTINUE_DATE &gt;= @effectiveDate and
+        T1.NUMB &gt; @numb
+  ) S1
+  outer apply
+  (
+    select top(1)
+      SERVICE_PRVDER_ID,
+      USER_ID
+    from
+      CKT_SERVICE_PRVDER
+    where
+      SERVICE_PRVDER_ID = S1.SPD_ID
+  ) S2
+order by
+  S1.NUMB
+</value>
+   </data>
+</root>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadContractorHistoryCseOrganizationCseOrganization">
+      <value>
+select
+  T1.IDENTIFIER,
+  T1.EFFECTIVE_DATE,
+  T1.END_DATE,
+  T1.FK_CKT_CSE_ORGATYPE_CODE,
+  T1.FK_CKT_CSE_ORGAORGANZTN_ID,
+  T1.FK0CKT_CSE_ORGATYPE_CODE,
+  T1.FK0CKT_CSE_ORGAORGANZTN_ID,
+  T3.NAME
+from
+  CKT_CSE_ORGANIZATN T3
+  join
+  CKT_CONTRACTOR_HST T1
+  on
+    T1.END_DATE &gt;= @endDate and
+    T1.EFFECTIVE_DATE &lt;= @endDate and
+    T1.FK0CKT_CSE_ORGAORGANZTN_ID = @fk0CktCseOrgaorganztnId and
+    T1.FK0CKT_CSE_ORGATYPE_CODE = 'J' and
+    T3.TYPE_CODE = T1.FK_CKT_CSE_ORGATYPE_CODE and
+    T3.ORGANZTN_ID = T1.FK_CKT_CSE_ORGAORGANZTN_ID and
+    T3.TYPE_CODE = 'X'
+order by
+  T1.END_DATE desc
+</value>
+   </data>
+</root>

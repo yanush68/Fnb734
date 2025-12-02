@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateContractorHistory">
+      <value>
+insert into CKT_CONTRACTOR_HST
+(
+  IDENTIFIER,
+  CREATED_BY,
+  CREATED_TIMESTMP,
+  EFFECTIVE_DATE,
+  END_DATE,
+  LAST_UPDATED_BY,
+  LAST_UPDATE_TIMESTMP,
+  FK_CKT_CSE_ORGATYPE_CODE,
+  FK_CKT_CSE_ORGAORGANZTN_ID,
+  FK0CKT_CSE_ORGATYPE_CODE,
+  FK0CKT_CSE_ORGAORGANZTN_ID
+)
+values
+(
+  @identifier,
+  @createdBy,
+  @createdTimestmp,
+  @effectiveDate,
+  @endDate,
+  @lastUpdatedBy,
+  @lastUpdateTimestmp,
+  @fkCktCseOrgatypeCode,
+  @fkCktCseOrgaorganztnId,
+  @fk0CktCseOrgatypeCode,
+  @fk0CktCseOrgaorganztnId
+)
+</value>
+   </data>
+   <data name="DeleteContractorHistory">
+      <value>
+delete from CKT_CONTRACTOR_HST
+where
+  IDENTIFIER = @identifier and
+  FK_CKT_CSE_ORGATYPE_CODE = @fkCktCseOrgatypeCode and
+  FK_CKT_CSE_ORGAORGANZTN_ID = @fkCktCseOrgaorganztnId and
+  FK0CKT_CSE_ORGATYPE_CODE = @fk0CktCseOrgatypeCode and
+  FK0CKT_CSE_ORGAORGANZTN_ID = @fk0CktCseOrgaorganztnId
+</value>
+   </data>
+   <data name="DeleteCseOrganizationRelationship">
+      <value>
+delete from CKT_CSE_ORG_RELATN
+where
+  COG_PARENT_CODE = @cogParentCode and
+  COG_PARENT_TYPE = @cogParentType and
+  COG_CHILD_CODE = @cogChildCode and
+  COG_CHILD_TYPE = @cogChildType
+</value>
+   </data>
+   <data name="ReadContractorHistory1">
+      <value>
+select
+  IDENTIFIER,
+  CREATED_BY,
+  CREATED_TIMESTMP,
+  EFFECTIVE_DATE,
+  END_DATE,
+  LAST_UPDATED_BY,
+  LAST_UPDATE_TIMESTMP,
+  FK_CKT_CSE_ORGATYPE_CODE,
+  FK_CKT_CSE_ORGAORGANZTN_ID,
+  FK0CKT_CSE_ORGATYPE_CODE,
+  FK0CKT_CSE_ORGAORGANZTN_ID
+from
+  CKT_CONTRACTOR_HST with(xlock)
+where
+  @fk0CktCseOrgatypeCode = FK0CKT_CSE_ORGATYPE_CODE and
+  @fk0CktCseOrgaorganztnId = FK0CKT_CSE_ORGAORGANZTN_ID and
+  @fkCktCseOrgatypeCode = FK_CKT_CSE_ORGATYPE_CODE and
+  @fkCktCseOrgaorganztnId = FK_CKT_CSE_ORGAORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadContractorHistory2">
+      <value>
+select
+  IDENTIFIER,
+  CREATED_BY,
+  CREATED_TIMESTMP,
+  EFFECTIVE_DATE,
+  END_DATE,
+  LAST_UPDATED_BY,
+  LAST_UPDATE_TIMESTMP,
+  FK_CKT_CSE_ORGATYPE_CODE,
+  FK_CKT_CSE_ORGAORGANZTN_ID,
+  FK0CKT_CSE_ORGATYPE_CODE,
+  FK0CKT_CSE_ORGAORGANZTN_ID
+from
+  CKT_CONTRACTOR_HST
+where
+  FK_CKT_CSE_ORGAORGANZTN_ID = @fkCktCseOrgaorganztnId and
+  FK0CKT_CSE_ORGAORGANZTN_ID = @fk0CktCseOrgaorganztnId
+order by
+  IDENTIFIER desc
+</value>
+   </data>
+   <data name="ReadContractorHistoryCseOrganization">
+      <value>
+select
+  T1.IDENTIFIER,
+  T1.CREATED_BY,
+  T1.CREATED_TIMESTMP,
+  T1.EFFECTIVE_DATE,
+  T1.END_DATE,
+  T1.LAST_UPDATED_BY,
+  T1.LAST_UPDATE_TIMESTMP,
+  T1.FK_CKT_CSE_ORGATYPE_CODE,
+  T1.FK_CKT_CSE_ORGAORGANZTN_ID,
+  T1.FK0CKT_CSE_ORGATYPE_CODE,
+  T1.FK0CKT_CSE_ORGAORGANZTN_ID,
+  T2.NAME
+from
+  CKT_CSE_ORGANIZATN T2
+  join
+  CKT_CONTRACTOR_HST T1 with(xlock)
+  on
+    @fk0CktCseOrgatypeCode = T1.FK0CKT_CSE_ORGATYPE_CODE and
+    @fk0CktCseOrgaorganztnId = T1.FK0CKT_CSE_ORGAORGANZTN_ID and
+    T2.TYPE_CODE = T1.FK_CKT_CSE_ORGATYPE_CODE and
+    T2.ORGANZTN_ID = T1.FK_CKT_CSE_ORGAORGANZTN_ID and
+    T2.TYPE_CODE = 'X'
+order by
+  T1.END_DATE desc
+</value>
+   </data>
+   <data name="ReadCseOrganizationCseOrganizationCseOrganizationRelationship">
+      <value>
+select
+  T3.COG_PARENT_CODE,
+  T3.COG_PARENT_TYPE,
+  T2.ORGANZTN_ID,
+  T2.TYPE_CODE,
+  T2.NAME,
+  T3.REASON_CODE,
+  T3.CREATED_TIMESTAMP
+from
+  CKT_CSE_ORGANIZATN T2
+  join
+  CKT_CSE_ORG_RELATN T3 with(xlock)
+  on
+    T3.COG_PARENT_TYPE = 'J' and
+    T3.REASON_CODE = 'XJ' and
+    T2.TYPE_CODE = T3.COG_CHILD_TYPE and
+    T2.ORGANZTN_ID = T3.COG_CHILD_CODE and
+    T2.TYPE_CODE = 'X'
+order by
+  T3.COG_PARENT_CODE,
+  T3.CREATED_TIMESTAMP desc
+</value>
+   </data>
+   <data name="UpdateContractorHistory">
+      <value>
+update CKT_CONTRACTOR_HST
+set
+  END_DATE = @endDate,
+  LAST_UPDATED_BY = @lastUpdatedBy,
+  LAST_UPDATE_TIMESTMP = @lastUpdateTimestmp
+where
+  IDENTIFIER = @identifier and
+  FK_CKT_CSE_ORGATYPE_CODE = @fkCktCseOrgatypeCode and
+  FK_CKT_CSE_ORGAORGANZTN_ID = @fkCktCseOrgaorganztnId and
+  FK0CKT_CSE_ORGATYPE_CODE = @fk0CktCseOrgatypeCode and
+  FK0CKT_CSE_ORGAORGANZTN_ID = @fk0CktCseOrgaorganztnId
+</value>
+   </data>
+</root>

@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadCaseAssignmentOffice">
+      <value>
+select
+  T1.EFFECTIVE_DATE,
+  T1.DISCONTINUE_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.SPD_ID,
+  T1.OFF_ID,
+  T1.OSP_CODE,
+  T1.OSP_DATE,
+  T1.CAS_NO,
+  T2.OFFICE_ID,
+  T2.COG_TYPE_CODE,
+  T2.COG_CODE,
+  T2.OFF_OFFICE
+from
+  CKT_OFFICE T2 with(readuncommitted)
+  join
+  CKT_ASSIGN_CASE T1 with(readuncommitted)
+  on
+    T1.CAS_NO = @casNo and
+    T1.DISCONTINUE_DATE &gt;= @discontinueDate and
+    T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+    T2.OFFICE_ID = T1.OFF_ID
+order by
+  T1.DISCONTINUE_DATE desc
+</value>
+   </data>
+   <data name="ReadCaseCaseRoleCaseRoleCaseAssignment1">
+      <value>
+select
+  *
+from
+  (
+    select
+      T2.CAS_NUMBER CAS_NUMBER1,
+      T2.CSP_NUMBER CSP_NUMBER1,
+      T2.TYPE TYPE1,
+      T2.CASE_ROLE_ID CASE_ROLE_ID1,
+      T2.START_DATE START_DATE1,
+      T2.END_DATE END_DATE1,
+      T3.CAS_NUMBER CAS_NUMBER2,
+      T3.CSP_NUMBER CSP_NUMBER2,
+      T3.TYPE TYPE2,
+      T3.CASE_ROLE_ID CASE_ROLE_ID2,
+      T3.START_DATE START_DATE2,
+      T3.END_DATE END_DATE2
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+      join
+      CKT_CASE_ROLE T3 with(readuncommitted)
+      on
+        T2.TYPE = 'AP' and
+        T2.START_DATE &lt;= @startDate and
+        T2.END_DATE &gt;= @startDate and
+        @cspNumber1 = T2.CSP_NUMBER and
+        T2.CAS_NUMBER = T3.CAS_NUMBER and
+        (T3.TYPE in ('CH', 'AR')) and
+        T3.START_DATE &lt;= @startDate and
+        T3.END_DATE &gt;= @startDate and
+        @cspNumber2 = T3.CSP_NUMBER
+  ) S1
+  cross apply
+  (
+    select top(1)
+      EFFECTIVE_DATE,
+      DISCONTINUE_DATE,
+      CREATED_TIMESTAMP,
+      SPD_ID,
+      OFF_ID,
+      OSP_CODE,
+      OSP_DATE,
+      CAS_NO
+    from
+      CKT_ASSIGN_CASE with(readuncommitted)
+    where
+      S1.CAS_NUMBER1 = CAS_NO and
+      EFFECTIVE_DATE &lt;= @effectiveDate and
+      DISCONTINUE_DATE &gt;= @discontinueDate
+  ) S2
+</value>
+   </data>
+   <data name="ReadCaseCaseRoleCaseRoleCaseAssignment2">
+      <value>
+select
+  *
+from
+  (
+    select
+      T2.CAS_NUMBER CAS_NUMBER1,
+      T2.CSP_NUMBER CSP_NUMBER1,
+      T2.TYPE TYPE1,
+      T2.CASE_ROLE_ID CASE_ROLE_ID1,
+      T2.START_DATE START_DATE1,
+      T2.END_DATE END_DATE1,
+      T3.CAS_NUMBER CAS_NUMBER2,
+      T3.CSP_NUMBER CSP_NUMBER2,
+      T3.TYPE TYPE2,
+      T3.CASE_ROLE_ID CASE_ROLE_ID2,
+      T3.START_DATE START_DATE2,
+      T3.END_DATE END_DATE2
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+      join
+      CKT_CASE_ROLE T3 with(readuncommitted)
+      on
+        T2.TYPE = 'AP' and
+        T2.END_DATE &gt; @endDate and
+        @cspNumber1 = T2.CSP_NUMBER and
+        T2.CAS_NUMBER = T3.CAS_NUMBER and
+        (T3.TYPE in ('CH', 'AR')) and
+        T3.END_DATE &gt; @endDate and
+        @cspNumber2 = T3.CSP_NUMBER and
+        (
+          T2.START_DATE &gt; @endDate or
+          T3.START_DATE &gt; @endDate
+        ) and
+        T2.START_DATE &lt;= T3.END_DATE and
+        T2.END_DATE &gt;= T3.START_DATE
+  ) S1
+  cross apply
+  (
+    select top(1)
+      EFFECTIVE_DATE,
+      DISCONTINUE_DATE,
+      CREATED_TIMESTAMP,
+      SPD_ID,
+      OFF_ID,
+      OSP_CODE,
+      OSP_DATE,
+      CAS_NO
+    from
+      CKT_ASSIGN_CASE with(readuncommitted)
+    where
+      S1.CAS_NUMBER1 = CAS_NO and
+      EFFECTIVE_DATE &lt;= @effectiveDate and
+      DISCONTINUE_DATE &gt;= @discontinueDate
+  ) S2
+</value>
+   </data>
+   <data name="ReadCaseCaseRoleCaseRoleCaseAssignment3">
+      <value>
+select
+  *
+from
+  (
+    select
+      T2.CAS_NUMBER CAS_NUMBER1,
+      T2.CSP_NUMBER CSP_NUMBER1,
+      T2.TYPE TYPE1,
+      T2.CASE_ROLE_ID CASE_ROLE_ID1,
+      T2.START_DATE START_DATE1,
+      T2.END_DATE END_DATE1,
+      T3.CAS_NUMBER CAS_NUMBER2,
+      T3.CSP_NUMBER CSP_NUMBER2,
+      T3.TYPE TYPE2,
+      T3.CASE_ROLE_ID CASE_ROLE_ID2,
+      T3.START_DATE START_DATE2,
+      T3.END_DATE END_DATE2
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+      join
+      CKT_CASE_ROLE T3 with(readuncommitted)
+      on
+        T2.TYPE = 'AP' and
+        T2.START_DATE &lt; @startDate and
+        @cspNumber1 = T2.CSP_NUMBER and
+        T2.CAS_NUMBER = T3.CAS_NUMBER and
+        (T3.TYPE in ('CH', 'AR')) and
+        T3.START_DATE &lt; @startDate and
+        @cspNumber2 = T3.CSP_NUMBER and
+        (
+          T2.END_DATE &lt; @startDate or
+          T3.END_DATE &lt; @startDate
+        ) and
+        T2.START_DATE &lt;= T3.END_DATE and
+        T2.END_DATE &gt;= T3.START_DATE
+  ) S1
+  cross apply
+  (
+    select top(1)
+      EFFECTIVE_DATE,
+      DISCONTINUE_DATE,
+      CREATED_TIMESTAMP,
+      SPD_ID,
+      OFF_ID,
+      OSP_CODE,
+      OSP_DATE,
+      CAS_NO
+    from
+      CKT_ASSIGN_CASE with(readuncommitted)
+    where
+      S1.CAS_NUMBER1 = CAS_NO and
+      EFFECTIVE_DATE &lt;= @effectiveDate and
+      DISCONTINUE_DATE &gt;= @discontinueDate
+  ) S2
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  T1.ORGANZTN_ID,
+  T1.TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN T1 with(readuncommitted)
+where
+  T1.TYPE_CODE = 'J' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CSE_ORG_RELATN T2 with(readuncommitted)
+    where
+      T1.TYPE_CODE = T2.COG_CHILD_TYPE and
+      T1.ORGANZTN_ID = T2.COG_CHILD_CODE and
+      T2.REASON_CODE = 'JC' and
+      T2.COG_PARENT_TYPE = @cogParentType and
+      T2.COG_PARENT_CODE = @cogParentCode
+  )
+</value>
+   </data>
+   <data name="ReadCsePerson1">
+      <value>
+select
+  NUMB
+from
+  CKT_CSE_PERSON with(readuncommitted)
+where
+  NUMB = @numb and
+  cast(@cpaType as char(1)) = 'R'
+</value>
+   </data>
+   <data name="ReadCsePerson2">
+      <value>
+select
+  NUMB
+from
+  CKT_CSE_PERSON with(readuncommitted)
+where
+  NUMB = @numb and
+  cast(@cpaSupType as char(1)) = 'S'
+</value>
+   </data>
+   <data name="ReadCsePerson3">
+      <value>
+select
+  NUMB
+from
+  CKT_CSE_PERSON with(readuncommitted)
+where
+  NUMB = @numb and
+  cast(@cpaSupType as char(1)) = 'S'
+</value>
+   </data>
+   <data name="ReadDebtDetail1">
+      <value>
+select
+  OBG_GENERATED_ID,
+  CSP_NUMBER,
+  CPA_TYPE,
+  OTR_GENERATED_ID,
+  OTY_TYPE,
+  OTR_TYPE,
+  DUE_DT
+from
+  CKT_DEBT_DTL with(readuncommitted)
+where
+  @otyType = OTY_TYPE and
+  @obgGeneratedId = OBG_GENERATED_ID and
+  @otrType = OTR_TYPE and
+  @otrGeneratedId = OTR_GENERATED_ID and
+  @cpaType = CPA_TYPE and
+  @cspNumber = CSP_NUMBER
+</value>
+   </data>
+   <data name="ReadDebtDetail2">
+      <value>
+select
+  OBG_GENERATED_ID,
+  CSP_NUMBER,
+  CPA_TYPE,
+  OTR_GENERATED_ID,
+  OTY_TYPE,
+  OTR_TYPE,
+  DUE_DT
+from
+  CKT_DEBT_DTL with(readuncommitted)
+where
+  @otyType = OTY_TYPE and
+  @obgGeneratedId = OBG_GENERATED_ID and
+  @otrType = OTR_TYPE and
+  @otrGeneratedId = OTR_GENERATED_ID and
+  @cpaType = CPA_TYPE and
+  @cspNumber = CSP_NUMBER
+</value>
+   </data>
+   <data name="ReadFips">
+      <value>
+select
+  [STATE],
+  COUNTY,
+  LOCATION
+from
+  CKT_FIPS
+where
+  LOCATION = @location and
+  COUNTY = @county and
+  [STATE] = @state
+</value>
+   </data>
+   <data name="ReadLegalActionTribunalFips">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.LEGAL_ACTION_ID,
+      T1.STANDARD_NO,
+      T1.TRB_ID,
+      T2.FIP_LOCATION,
+      T2.JUDICIAL_DISTRICT,
+      T2.FIP_COUNTY,
+      T2.FIP_STATE
+    from
+      CKT_TRIBUNAL T2 with(readuncommitted)
+      join
+      CKT_LEGAL_ACTION T1 with(readuncommitted)
+      on
+        T1.LEGAL_ACTION_ID = @legalActionId and
+        T2.IDENTIFIER = T1.TRB_ID
+  ) S1
+  outer apply
+  (
+    select top(1)
+      [STATE],
+      COUNTY,
+      LOCATION
+    from
+      CKT_FIPS
+    where
+      LOCATION = S1.FIP_LOCATION and
+      COUNTY = S1.FIP_COUNTY and
+      [STATE] = S1.FIP_STATE
+  ) S2
+</value>
+   </data>
+   <data name="ReadObligation">
+      <value>
+select
+  CPA_TYPE,
+  CSP_NUMBER,
+  OB_ID,
+  DTY_GENERATED_ID,
+  LGA_ID
+from
+  CKT_OBLIGATION with(readuncommitted)
+where
+  DTY_GENERATED_ID = @dtyGeneratedId and
+  OB_ID = @obId and
+  CSP_NUMBER = @cspNumber and
+  CPA_TYPE = @cpaType
+</value>
+   </data>
+   <data name="ReadObligationDebt">
+      <value>
+select
+  T1.CPA_TYPE,
+  T1.CSP_NUMBER,
+  T1.OB_ID,
+  T1.DTY_GENERATED_ID,
+  T1.LGA_ID,
+  T2.OB_TRN_ID,
+  T2.OB_TRN_TYP,
+  T2.CSP_SUP_NUMBER,
+  T2.CPA_SUP_TYPE
+from
+  CKT_OBLIGATION T1 with(readuncommitted)
+  join
+  CKT_OB_TRN T2 with(readuncommitted)
+  on
+    T2.OTY_TYPE = @otyType and
+    T2.OB_TRN_TYP = @obTrnTyp and
+    T2.OB_TRN_ID = @obTrnId and
+    T2.CPA_TYPE = @cpaType and
+    T2.CSP_NUMBER = @cspNumber and
+    T2.OBG_GENERATED_ID = @obgGeneratedId and
+    T1.DTY_GENERATED_ID = T2.OTY_TYPE and
+    T1.OB_ID = T2.OBG_GENERATED_ID and
+    T1.CSP_NUMBER = T2.CSP_NUMBER and
+    T1.CPA_TYPE = T2.CPA_TYPE and
+    T2.OB_TRN_TYP = 'DE'
+</value>
+   </data>
+   <data name="ReadObligationType1">
+      <value>
+select
+  DEBT_TYP_ID,
+  DEBT_TYP_CLASS
+from
+  CKT_OB_TYPE
+where
+  DEBT_TYP_ID = @debtTypId
+</value>
+   </data>
+   <data name="ReadObligationType2">
+      <value>
+select
+  DEBT_TYP_ID,
+  DEBT_TYP_CLASS
+from
+  CKT_OB_TYPE with(readuncommitted)
+where
+  DEBT_TYP_ID = @debtTypId
+</value>
+   </data>
+   <data name="ReadTribunal">
+      <value>
+select
+  FIP_LOCATION,
+  JUDICIAL_DISTRICT,
+  IDENTIFIER,
+  FIP_COUNTY,
+  FIP_STATE
+from
+  CKT_TRIBUNAL
+where
+  IDENTIFIER = @identifier
+</value>
+   </data>
+</root>

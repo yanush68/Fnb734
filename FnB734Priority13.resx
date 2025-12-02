@@ -1,0 +1,3352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardStagingPriority1">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casPayingArrNum,
+  @casPayingArrDen,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @contractorNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @prvYrPdArNumtr,
+  @prvYrPdArDenom,
+  @payArPrvYrPct,
+  @pctChgByrArsPd
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority2">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casPayingArrNum,
+  @casPayingArrDen,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @contractorNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @prvYrPdArNumtr,
+  @prvYrPdArDenom,
+  @payArPrvYrPct,
+  @pctChgByrArsPd
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority3">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casPayingArrDen,
+  @casPayingArrNum,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority4">
+      <value>
+insert into CKT_DB_STAGE_PRI35
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_W_EST_REF,
+  CAS_W_ENF_REF,
+  FULL_TIME_EQVLNT,
+  NEW_ORD_EST,
+  PATERNITIES_EST,
+  CASES_OPN_W_ORDER,
+  CASES_OPN_WO_ORDER,
+  CASES_CLS_W_ORDER,
+  CASES_CLS_WO_ORDER,
+  MODIFICATIONS,
+  IW_ISSUED,
+  CNTMPT_MTN_FILED,
+  CNTMPT_ORD_FILED,
+  S_TYPE_COLL_AMT,
+  S_TYPE_COLL_PER,
+  F_TYPE_COLL_AMT,
+  F_TYPE_COLL_PER,
+  I_TYPE_COLL_AMT,
+  I_TYPE_COLL_PER,
+  U_TYPE_COLL_AMT,
+  U_TYPE_COLL_PER,
+  C_TYPE_COLL_AMT,
+  C_TYPE_COLL_PER,
+  TOTAL_COLL_AMT,
+  ORD_EST_DAYS_NMR,
+  ORD_EST_DAYS_DNOM,
+  ORD_EST_DAYS_AVG,
+  RET_SERV_DAYS_NMR,
+  RET_SRV_DAYS_DNOM,
+  RET_SERV_DAYS_AVG,
+  REF_AGE_60_TO_90,
+  REF_AGE_91_TO_120,
+  REF_AGE_121_TO_150,
+  REF_AGE_151_PLUS,
+  IWO_PMT_DAYS_NMR,
+  IWO_PMT_DAYS_DNOM,
+  IWO_PMT_DAYS_AVG,
+  EST_REF_TO_LEGAL,
+  ENF_REF_TO_LEGAL,
+  CASELOAD_COUNT,
+  CASES_OPENED,
+  NCP_LOC_BY_ADRSS,
+  NCP_LOC_BY_EMP,
+  CASE_CLOSURES,
+  CASE_REVIEWS,
+  PETITIONS,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDate,
+  @casWEstRef,
+  @casWEstRef,
+  @fullTimeEqvlnt,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @STypeCollAmt,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @STypeCollPer,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casWEstRef,
+  @casPayingArrDen,
+  @casPayingArrNum,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef,
+  @STypeCollAmt,
+  @STypeCollAmt,
+  @STypeCollPer,
+  @casWEstRef
+)
+</value>
+   </data>
+   <data name="CreateDashboardStagingPriority5">
+      <value>
+insert into CKT_DB_STAGE_PRI12
+(
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_NUM,
+  CAS_UNDER_ORD_DEN,
+  CAS_UNDER_ORD_PER,
+  CAS_UNDER_ORD_RNK,
+  PEP_NUM,
+  PEP_DEN,
+  PEP_PER,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CUR_SUP_PD_MTH_NUM,
+  CUR_SUP_PD_MTH_DEN,
+  CUR_SUP_PD_MTH_PER,
+  CUR_SUP_PD_MTH_RNK,
+  CUR_SUP_PD_YTD_NUM,
+  CUR_SUP_PD_YTD_DEN,
+  CUR_SUP_PD_YTD_PER,
+  CUR_SUP_PD_YTD_RNK,
+  COLL_YTD_TO_PRI_MO,
+  COLL_YTD_ACT,
+  COLL_YTD_PRI_YR,
+  COLL_YTD_PER_CHG,
+  COLL_YTD_RNK,
+  COLL_IN_MTH_ACT,
+  COLL_IN_MTH_PRI_YR,
+  COLL_IN_MTH_PER_CH,
+  COLL_IN_MTH_RNK,
+  ARR_DIST_MTH_ACT,
+  ARR_DIST_MTH_RNK,
+  ARR_DIST_YTD_ACT,
+  ARR_DIST_YTD_RNK,
+  ARR_DUE_ACT,
+  ARR_DUE_RNK,
+  COLL_OBL_CAS_NUM,
+  COLL_OBL_CAS_DEN,
+  COLL_OBL_CAS_AVG,
+  COLL_OBL_CAS_RNK,
+  IWO_OBL_CAS_NUM,
+  IWO_OBL_CAS_DEN,
+  IWO_OBL_CAS_AVG,
+  IWO_OBL_CAS_RNK,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  COLL_PER_FTE_NUM,
+  COLL_PER_FTE_DEN,
+  COLL_PER_FTE_AVG,
+  COLL_PER_FTE_RNK,
+  CAS_PAYING_NUM,
+  CAS_PAYING_DEN,
+  CAS_PAYING_PER,
+  CAS_PAYING_RNK,
+  PEP_RANK,
+  CONTRACTOR_NUM,
+  PRV_YR_PEP_NUMTR,
+  PRV_YR_PEP_DENOM,
+  PRV_YR_PEP_PCT,
+  PCT_CHG_BYR_PEP,
+  PRV_YR_CASE_NUMTR,
+  PRV_YR_CASE_DENOM,
+  PRV_YR_CAS_PCT_UO,
+  PCT_CHG_BYR_CAS_UO,
+  PV_YR_SUP_PD_NUMTR,
+  PV_YR_SUP_PD_DENOM,
+  PRV_YR_C_S_PD_PCT,
+  PCT_CHG_BYR_CS_PD,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+)
+values
+(
+  @reportMonth,
+  @reportLevel,
+  @reportLevelId,
+  @asOfDt,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casPayingArrNum,
+  @casPayingArrDen,
+  @casPayingArrPer,
+  @casPayingArrRnk,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casPerFteDen,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @contractorNum,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @casUnderOrdNum,
+  @casUnderOrdNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @curSupPdMthNum,
+  @curSupPdMthNum,
+  @casUnderOrdPer,
+  @casUnderOrdPer,
+  @prvYrPdArNumtr,
+  @prvYrPdArDenom,
+  @payArPrvYrPct,
+  @pctChgByrArsPd
+)
+</value>
+   </data>
+   <data name="ReadCaseAssignmentServiceProvider">
+      <value>
+select
+  T1.REASON_CODE,
+  T1.EFFECTIVE_DATE,
+  T1.DISCONTINUE_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.SPD_ID,
+  T1.OFF_ID,
+  T1.OSP_CODE,
+  T1.OSP_DATE,
+  T1.CAS_NO,
+  T2.SERVICE_PRVDER_ID,
+  T2.USER_ID,
+  T2.ROLE_CODE
+from
+  CKT_SERVICE_PRVDER T2
+  join
+  CKT_ASSIGN_CASE T1
+  on
+    @casNo = T1.CAS_NO and
+    T1.REASON_CODE = 'RSP' and
+    T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+    T1.DISCONTINUE_DATE &gt;= @discontinueDate and
+    T2.SERVICE_PRVDER_ID = T1.SPD_ID
+order by
+  T1.EFFECTIVE_DATE desc
+</value>
+   </data>
+   <data name="ReadCaseCaseAssignment">
+      <value>
+select
+  T1.NUMB,
+  T1.STATUS,
+  T1.STATUS_DATE,
+  T1.CSE_OPEN_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.INTERSTATE_CASE_ID,
+  T1.NO_JURISDICTION_CD,
+  T2.REASON_CODE,
+  T2.EFFECTIVE_DATE,
+  T2.DISCONTINUE_DATE,
+  T2.CREATED_TIMESTAMP,
+  T2.SPD_ID,
+  T2.OFF_ID,
+  T2.OSP_CODE,
+  T2.OSP_DATE
+from
+  CKT_CASE T1 with(readuncommitted)
+  join
+  CKT_ASSIGN_CASE T2 with(readuncommitted)
+  on
+    T1.NO_JURISDICTION_CD = ' ' and
+    T1.NUMB = T2.CAS_NO and
+    T2.EFFECTIVE_DATE &lt;= @effectiveDate and
+    T2.DISCONTINUE_DATE &gt;= @discontinueDate and
+    T1.NUMB &gt; @numb
+order by
+  T1.NUMB,
+  T2.DISCONTINUE_DATE desc
+</value>
+   </data>
+   <data name="ReadCaseRole">
+      <value>
+select
+  T1.CAS_NUMBER,
+  T1.CSP_NUMBER,
+  T1.TYPE,
+  T1.CASE_ROLE_ID,
+  T1.START_DATE,
+  T1.END_DATE
+from
+  CKT_CASE_ROLE T1 with(readuncommitted)
+where
+  @cspNumber1 = T1.CSP_NUMBER and
+  @casNumber = T1.CAS_NUMBER and
+  (T1.TYPE in ('CH', 'AR')) and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+    where
+      @casNumber = T2.CAS_NUMBER and
+      T2.TYPE = 'AP' and
+      T1.START_DATE &lt;= T2.END_DATE and
+      T1.END_DATE &gt;= T2.START_DATE and
+      @cspNumber2 = T2.CSP_NUMBER
+  )
+</value>
+   </data>
+   <data name="ReadCaseRoleCsePersonCaseRoleCsePerson">
+      <value>
+select distinct
+  T1.CAS_NUMBER,
+  T1.CSP_NUMBER,
+  T1.TYPE,
+  T1.CASE_ROLE_ID,
+  T1.START_DATE,
+  T1.END_DATE,
+  T1.EMANCIPATION_DT,
+  T3.CAS_NUMBER,
+  T3.CSP_NUMBER,
+  T3.TYPE,
+  T3.CASE_ROLE_ID,
+  T3.START_DATE,
+  T3.END_DATE
+from
+  CKT_CASE_ROLE T1 with(readuncommitted)
+  join
+  CKT_CASE_ROLE T3 with(readuncommitted)
+  on
+    (T3.TYPE in ('AR', 'CH')) and
+    T1.START_DATE &lt;= T3.END_DATE and
+    T1.END_DATE &gt;= T3.START_DATE and
+    @casNumber = T1.CAS_NUMBER and
+    T1.TYPE = 'AP' and
+    @casNumber = T3.CAS_NUMBER
+</value>
+   </data>
+   <data name="ReadCollection1">
+      <value>
+select
+  COLL_ID,
+  APPLIED_TO_CD,
+  COLL_DT,
+  ADJ_IND,
+  CONCURRENT_IND,
+  CRT_TYPE,
+  CST_ID,
+  CRV_ID,
+  CRD_ID,
+  OBG_ID,
+  CSP_NUMBER,
+  CPA_TYPE,
+  OTR_ID,
+  OTR_TYPE,
+  OTY_ID,
+  COLL_ADJ_DT,
+  CREATED_TMST,
+  OB_TRN_AMT,
+  PGM_APPLD_TO
+from
+  CKT_COLLECTION with(readuncommitted)
+where
+  (
+    COLL_ADJ_DT &gt; @collAdjDt and
+    ADJ_IND = 'Y' and
+    CREATED_TMST &lt; @createdTmst or
+    ADJ_IND = 'N' and
+    CREATED_TMST &gt; @createdTmst
+  ) and
+  @otyId = OTY_ID and
+  @otrType = OTR_TYPE and
+  @otrId = OTR_ID and
+  @cpaType = CPA_TYPE and
+  @cspNumber = CSP_NUMBER and
+  @obgId = OBG_ID and
+  APPLIED_TO_CD = 'A'
+</value>
+   </data>
+   <data name="ReadCollection2">
+      <value>
+select
+  T1.COLL_ID,
+  T1.APPLIED_TO_CD,
+  T1.COLL_DT,
+  T1.ADJ_IND,
+  T1.CONCURRENT_IND,
+  T1.CRT_TYPE,
+  T1.CST_ID,
+  T1.CRV_ID,
+  T1.CRD_ID,
+  T1.OBG_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OTR_ID,
+  T1.OTR_TYPE,
+  T1.OTY_ID,
+  T1.COLL_ADJ_DT,
+  T1.CREATED_TMST,
+  T1.OB_TRN_AMT,
+  T1.PGM_APPLD_TO
+from
+  CKT_COLLECTION T1 with(readuncommitted)
+where
+  T1.CONCURRENT_IND = 'N' and
+  T1.APPLIED_TO_CD = 'A' and
+  T1.ADJ_IND = 'N' and
+  T1.CREATED_TMST &gt; @createdTmst and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OB_TRN T2 with(readuncommitted)
+    where
+      T2.OTY_TYPE = T1.OTY_ID and
+      T2.OB_TRN_TYP = T1.OTR_TYPE and
+      T2.OB_TRN_ID = T1.OTR_ID and
+      T2.CPA_TYPE = T1.CPA_TYPE and
+      T2.CSP_NUMBER = T1.CSP_NUMBER and
+      T2.OBG_GENERATED_ID = T1.OBG_ID and
+      T2.CREATED_TMST &lt; @createdTmst and
+      @cspNumber = T2.CSP_NUMBER and
+      T2.OB_TRN_TYP = 'DE' and
+      T2.CPA_TYPE = 'R'
+  )
+</value>
+   </data>
+   <data name="ReadCollectionCollection1">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CONCURRENT_IND = 'N' and
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      T1.CREATED_TMST &gt; @createdTmst1 and
+      T1.CREATED_TMST &lt; @createdTmst2 and
+      @cspNumber = T1.CSP_NUMBER and
+      T1.OTR_TYPE = 'DE' and
+      T1.CPA_TYPE = 'R' and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CR_DETAIL T2 with(readuncommitted)
+        where
+          T2.CRD_ID = T1.CRD_ID and
+          T2.CRV_IDENTIFIER = T1.CRV_ID and
+          T2.CST_IDENTIFIER = T1.CST_ID and
+          T2.CRT_IDENTIFIER = T1.CRT_TYPE and
+          T2.CLT_IDENTIFIER is not null and
+          (T2.CLT_IDENTIFIER in (3, 27)) and
+          T2.CRT_IDENTIFIER &lt;&gt; 2 and
+          T2.CRT_IDENTIFIER &lt;&gt; 7
+      )
+  ) S1
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S2
+order by
+  S1.COLL_DT
+</value>
+   </data>
+   <data name="ReadCollectionCollection2">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CONCURRENT_IND = 'N' and
+      (
+        T1.PGM_APPLD_TO in ('AF', 'FC', 'NC',
+          'NF')
+      ) and
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      T1.CREATED_TMST &gt; @createdTmst1 and
+      T1.CREATED_TMST &lt; @createdTmst2 and
+      @cspNumber = T1.CSP_NUMBER and
+      T1.OTR_TYPE = 'DE' and
+      T1.CPA_TYPE = 'R' and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CR_DETAIL T2 with(readuncommitted)
+        where
+          T2.CRD_ID = T1.CRD_ID and
+          T2.CRV_IDENTIFIER = T1.CRV_ID and
+          T2.CST_IDENTIFIER = T1.CST_ID and
+          T2.CRT_IDENTIFIER = T1.CRT_TYPE and
+          T2.CLT_IDENTIFIER is not null and
+          (T2.CLT_IDENTIFIER in (3, 27)) and
+          T2.CRT_IDENTIFIER &lt;&gt; 2 and
+          T2.CRT_IDENTIFIER &lt;&gt; 7
+      )
+  ) S1
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S2
+order by
+  S1.COLL_DT
+</value>
+   </data>
+   <data name="ReadCollectionCollection3">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CONCURRENT_IND = 'N' and
+      T1.PGM_APPLD_TO &lt;&gt; 'AF' and
+      T1.PGM_APPLD_TO &lt;&gt; 'FC' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NC' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NF' and
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      @cspNumber = T1.CSP_NUMBER and
+      T1.OTR_TYPE = 'DE' and
+      T1.CPA_TYPE = 'R' and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CR_DETAIL T2 with(readuncommitted)
+        where
+          T2.CRD_ID = T1.CRD_ID and
+          T2.CRV_IDENTIFIER = T1.CRV_ID and
+          T2.CST_IDENTIFIER = T1.CST_ID and
+          T2.CRT_IDENTIFIER = T1.CRT_TYPE and
+          T2.CLT_IDENTIFIER is not null and
+          (T2.CLT_IDENTIFIER in (3, 27)) and
+          T2.CRT_IDENTIFIER &lt;&gt; 2 and
+          T2.CRT_IDENTIFIER &lt;&gt; 7
+      ) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_PMNT_REQUEST T12 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T11 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T9 with(readuncommitted)
+          join
+          CKT_DISB_TRAN_RLN T10 with(readuncommitted)
+          on
+            T9.TYPE = 'C' and
+            T9.DISB_TRAN_ID = T10.DTR_P_GENERATED_ID and
+            T9.CPA_TYPE = T10.CPA_P_TYPE and
+            T9.CSP_NUMBER = T10.CSP_P_NUMBER
+          on
+            T11.DISB_TRAN_ID = T10.DTR_GENERATED_ID and
+            T11.CPA_TYPE = T10.CPA_TYPE and
+            T11.CSP_NUMBER = T10.CSP_NUMBER
+          on
+            T12.PAYMENT_REQUEST_ID = T11.PRQ_GENERATED_ID and
+            T12.CLASSIFICATION = 'SUP' and
+            (T12.CREATED_TIMESTAMP between cast(@timestamp1 as datetime2) and cast(@timestamp2 as datetime2))
+        where
+          T1.COLL_ID = T9.COL_ID and
+          T1.OTY_ID = T9.OTY_ID and
+          T1.OBG_ID = T9.OBG_ID and
+          T1.CSP_NUMBER = T9.CSP_NUMBER_DISB and
+          T1.CPA_TYPE = T9.CPA_TYPE_DISB and
+          T1.OTR_ID = T9.OTR_ID and
+          T1.OTR_TYPE = T9.OTR_TYPE_DISB and
+          T1.CRT_TYPE = T9.CRT_ID and
+          T1.CST_ID = T9.CST_ID and
+          T1.CRV_ID = T9.CRV_ID and
+          T1.CRD_ID = T9.CRD_ID
+      )
+  ) S1
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @timestamp1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S2
+order by
+  S1.COLL_DT
+</value>
+   </data>
+   <data name="ReadCollectionCsePersonObligationTypeCaseRoleCollection1">
+      <value>
+select
+  *
+from
+  (
+    select
+      COLL_ID,
+      APPLIED_TO_CD,
+      COLL_DT,
+      ADJ_IND,
+      CONCURRENT_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST,
+      OB_TRN_AMT,
+      PGM_APPLD_TO
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CONCURRENT_IND = 'N' and
+      PGM_APPLD_TO &lt;&gt; 'NA' and
+      PGM_APPLD_TO &lt;&gt; 'NAI' and
+      (
+        ADJ_IND = 'Y' and
+        COLL_ADJ_DT &gt; @collAdjDt or
+        ADJ_IND = 'N'
+      ) and
+      CREATED_TMST &gt; @createdTmst1 and
+      CREATED_TMST &lt; @createdTmst2 and
+      @cspNumber = CSP_NUMBER and
+      APPLIED_TO_CD = 'A' and
+      CRT_TYPE &lt;&gt; 2 and
+      CRT_TYPE &lt;&gt; 7 and
+      OTR_TYPE = 'DE' and
+      CPA_TYPE = 'R'
+  ) S1
+  cross apply
+  (
+    select top(1)
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_OB_TRN T3 with(readuncommitted)
+      where
+        T1.NUMB = T3.CSP_SUP_NUMBER and
+        T3.OTY_TYPE = S1.OTY_ID and
+        T3.OB_TRN_TYP = S1.OTR_TYPE and
+        T3.OB_TRN_ID = S1.OTR_ID and
+        T3.CPA_TYPE = S1.CPA_TYPE and
+        T3.CSP_NUMBER = S1.CSP_NUMBER and
+        T3.OBG_GENERATED_ID = S1.OBG_ID and
+        T3.CPA_SUP_TYPE = 'S' and
+        T3.OB_TRN_TYP = 'DE'
+    )
+  ) S2
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S1.OTY_ID and
+      S1.OTR_TYPE = 'DE'
+  ) S3
+  cross apply
+  (
+    select top(1)
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.TYPE,
+      T1.CASE_ROLE_ID,
+      T1.START_DATE,
+      T1.END_DATE
+    from
+      CKT_CASE_ROLE T1 with(readuncommitted)
+    where
+      S2.NUMB = T1.CSP_NUMBER and
+      @casNumber = T1.CAS_NUMBER and
+      (T1.TYPE in ('CH', 'AR')) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CASE_ROLE T2 with(readuncommitted)
+        where
+          @casNumber = T2.CAS_NUMBER and
+          T2.TYPE = 'AP' and
+          T1.START_DATE &lt;= T2.END_DATE and
+          T1.END_DATE &gt;= T2.START_DATE and
+          @cspNumber = T2.CSP_NUMBER
+      )
+  ) S4
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S5
+</value>
+   </data>
+   <data name="ReadCollectionCsePersonObligationTypeCaseRoleCollection2">
+      <value>
+select
+  *
+from
+  (
+    select
+      COLL_ID,
+      APPLIED_TO_CD,
+      COLL_DT,
+      ADJ_IND,
+      CONCURRENT_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST,
+      OB_TRN_AMT,
+      PGM_APPLD_TO
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CONCURRENT_IND = 'N' and
+      (
+        PGM_APPLD_TO in ('AF', 'FC', 'NC',
+          'NF')
+      ) and
+      (
+        ADJ_IND = 'Y' and
+        COLL_ADJ_DT &gt; @collAdjDt or
+        ADJ_IND = 'N'
+      ) and
+      CREATED_TMST &gt; @createdTmst1 and
+      CREATED_TMST &lt; @createdTmst2 and
+      @cspNumber = CSP_NUMBER and
+      APPLIED_TO_CD = 'A' and
+      CRT_TYPE &lt;&gt; 2 and
+      CRT_TYPE &lt;&gt; 7 and
+      OTR_TYPE = 'DE' and
+      CPA_TYPE = 'R'
+  ) S1
+  cross apply
+  (
+    select top(1)
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_OB_TRN T3 with(readuncommitted)
+      where
+        T1.NUMB = T3.CSP_SUP_NUMBER and
+        T3.OTY_TYPE = S1.OTY_ID and
+        T3.OB_TRN_TYP = S1.OTR_TYPE and
+        T3.OB_TRN_ID = S1.OTR_ID and
+        T3.CPA_TYPE = S1.CPA_TYPE and
+        T3.CSP_NUMBER = S1.CSP_NUMBER and
+        T3.OBG_GENERATED_ID = S1.OBG_ID and
+        T3.CPA_SUP_TYPE = 'S' and
+        T3.OB_TRN_TYP = 'DE'
+    )
+  ) S2
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S1.OTY_ID and
+      S1.OTR_TYPE = 'DE'
+  ) S3
+  cross apply
+  (
+    select top(1)
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.TYPE,
+      T1.CASE_ROLE_ID,
+      T1.START_DATE,
+      T1.END_DATE
+    from
+      CKT_CASE_ROLE T1 with(readuncommitted)
+    where
+      S2.NUMB = T1.CSP_NUMBER and
+      @casNumber = T1.CAS_NUMBER and
+      (T1.TYPE in ('CH', 'AR')) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CASE_ROLE T2 with(readuncommitted)
+        where
+          @casNumber = T2.CAS_NUMBER and
+          T2.TYPE = 'AP' and
+          T1.START_DATE &lt;= T2.END_DATE and
+          T1.END_DATE &gt;= T2.START_DATE and
+          @cspNumber = T2.CSP_NUMBER
+      )
+  ) S4
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S5
+</value>
+   </data>
+   <data name="ReadCollectionCsePersonObligationTypeCaseRoleCollection3">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      T1.CONCURRENT_IND = 'N' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NA' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NAI' and
+      T1.PGM_APPLD_TO &lt;&gt; 'AF' and
+      T1.PGM_APPLD_TO &lt;&gt; 'FC' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NC' and
+      T1.PGM_APPLD_TO &lt;&gt; 'NF' and
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      @cspNumber = T1.CSP_NUMBER and
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CRT_TYPE &lt;&gt; 2 and
+      T1.CRT_TYPE &lt;&gt; 7 and
+      T1.OTR_TYPE = 'DE' and
+      T1.CPA_TYPE = 'R' and
+      exists
+      (
+        select
+          *
+        from
+          CKT_PMNT_REQUEST T11 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T10 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T8 with(readuncommitted)
+          join
+          CKT_DISB_TRAN_RLN T9 with(readuncommitted)
+          on
+            T8.TYPE = 'C' and
+            T8.DISB_TRAN_ID = T9.DTR_P_GENERATED_ID and
+            T8.CPA_TYPE = T9.CPA_P_TYPE and
+            T8.CSP_NUMBER = T9.CSP_P_NUMBER
+          on
+            T10.DISB_TRAN_ID = T9.DTR_GENERATED_ID and
+            T10.CPA_TYPE = T9.CPA_TYPE and
+            T10.CSP_NUMBER = T9.CSP_NUMBER
+          on
+            T11.PAYMENT_REQUEST_ID = T10.PRQ_GENERATED_ID and
+            T11.CLASSIFICATION = 'SUP' and
+            (T11.CREATED_TIMESTAMP between cast(@timestamp1 as datetime2) and cast(@timestamp2 as datetime2))
+        where
+          T1.COLL_ID = T8.COL_ID and
+          T1.OTY_ID = T8.OTY_ID and
+          T1.OBG_ID = T8.OBG_ID and
+          T1.CSP_NUMBER = T8.CSP_NUMBER_DISB and
+          T1.CPA_TYPE = T8.CPA_TYPE_DISB and
+          T1.OTR_ID = T8.OTR_ID and
+          T1.OTR_TYPE = T8.OTR_TYPE_DISB and
+          T1.CRT_TYPE = T8.CRT_ID and
+          T1.CST_ID = T8.CST_ID and
+          T1.CRV_ID = T8.CRV_ID and
+          T1.CRD_ID = T8.CRD_ID
+      )
+  ) S1
+  cross apply
+  (
+    select top(1)
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_OB_TRN T3 with(readuncommitted)
+      where
+        T1.NUMB = T3.CSP_SUP_NUMBER and
+        T3.OTY_TYPE = S1.OTY_ID and
+        T3.OB_TRN_TYP = S1.OTR_TYPE and
+        T3.OB_TRN_ID = S1.OTR_ID and
+        T3.CPA_TYPE = S1.CPA_TYPE and
+        T3.CSP_NUMBER = S1.CSP_NUMBER and
+        T3.OBG_GENERATED_ID = S1.OBG_ID and
+        T3.CPA_SUP_TYPE = 'S' and
+        T3.OB_TRN_TYP = 'DE'
+    )
+  ) S2
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S1.OTY_ID and
+      S1.OTR_TYPE = 'DE'
+  ) S3
+  cross apply
+  (
+    select top(1)
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.TYPE,
+      T1.CASE_ROLE_ID,
+      T1.START_DATE,
+      T1.END_DATE
+    from
+      CKT_CASE_ROLE T1 with(readuncommitted)
+    where
+      S2.NUMB = T1.CSP_NUMBER and
+      @casNumber = T1.CAS_NUMBER and
+      (T1.TYPE in ('CH', 'AR')) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CASE_ROLE T2 with(readuncommitted)
+        where
+          @casNumber = T2.CAS_NUMBER and
+          T2.TYPE = 'AP' and
+          T1.START_DATE &lt;= T2.END_DATE and
+          T1.END_DATE &gt;= T2.START_DATE and
+          @cspNumber = T2.CSP_NUMBER
+      )
+  ) S4
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @timestamp1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S5
+</value>
+   </data>
+   <data name="ReadCollectionObligationTypeCollection">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      T1.CREATED_TMST &gt; @createdTmst1 and
+      T1.CREATED_TMST &lt; @createdTmst2 and
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CRT_TYPE &lt;&gt; 2 and
+      T1.CRT_TYPE &lt;&gt; 7 and
+      exists
+      (
+        select
+          *
+        from
+          CKT_OB_TRN T2 with(readuncommitted)
+        where
+          T2.OTY_TYPE = T1.OTY_ID and
+          T2.OB_TRN_TYP = T1.OTR_TYPE and
+          T2.OB_TRN_ID = T1.OTR_ID and
+          T2.CPA_TYPE = T1.CPA_TYPE and
+          T2.CSP_NUMBER = T1.CSP_NUMBER and
+          T2.OBG_GENERATED_ID = T1.OBG_ID and
+          @cspNumber = T2.CSP_NUMBER and
+          @cspSupNumber = T2.CSP_SUP_NUMBER and
+          T2.OB_TRN_TYP = 'DE' and
+          T2.CPA_TYPE = 'R' and
+          T2.CPA_SUP_TYPE = 'S'
+      )
+  ) S1
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S1.OTY_ID and
+      S1.OTR_TYPE = 'DE'
+  ) S2
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S1.CRD_ID and
+      CRV_ID = S1.CRV_ID and
+      CST_ID = S1.CST_ID and
+      CRT_TYPE = S1.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S3
+</value>
+   </data>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN with(readuncommitted)
+where
+  TYPE_CODE = 'J'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadCsePerson">
+      <value>
+select distinct
+  T1.NUMB
+from
+  CKT_CSE_PERSON T1 with(readuncommitted)
+where exists
+(
+  select
+    *
+  from
+    CKT_CASE_ROLE T2 with(readuncommitted)
+  where
+    T1.NUMB = T2.CSP_NUMBER and
+    T2.TYPE = 'AP' and
+    @casNumber = T2.CAS_NUMBER
+)
+</value>
+   </data>
+   <data name="ReadCsePersonCollectionCsePersonObligationType1">
+      <value>
+select
+  *
+from
+  (
+    select distinct
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_CASE_ROLE T2 with(readuncommitted)
+      where
+        T1.NUMB = T2.CSP_NUMBER and
+        T2.TYPE = 'AP' and
+        @casNumber = T2.CAS_NUMBER
+    )
+  ) S1
+  cross apply
+  (
+    select
+      COLL_ID,
+      APPLIED_TO_CD,
+      COLL_DT,
+      ADJ_IND,
+      CONCURRENT_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST,
+      OB_TRN_AMT,
+      PGM_APPLD_TO
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CONCURRENT_IND = 'N' and
+      (PGM_APPLD_TO in ('NA', 'NAI')) and
+      (
+        ADJ_IND = 'Y' and
+        COLL_ADJ_DT &gt; @collAdjDt or
+        ADJ_IND = 'N'
+      ) and
+      CREATED_TMST &gt; @createdTmst1 and
+      CREATED_TMST &lt; @createdTmst2 and
+      S1.NUMB = CSP_NUMBER and
+      APPLIED_TO_CD = 'A' and
+      CRT_TYPE &lt;&gt; 2 and
+      CRT_TYPE &lt;&gt; 7 and
+      OTR_TYPE = 'DE' and
+      CPA_TYPE = 'R'
+  ) S2
+  cross apply
+  (
+    select top(1)
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_OB_TRN T3 with(readuncommitted)
+      where
+        T1.NUMB = T3.CSP_SUP_NUMBER and
+        T3.OTY_TYPE = S2.OTY_ID and
+        T3.OB_TRN_TYP = S2.OTR_TYPE and
+        T3.OB_TRN_ID = S2.OTR_ID and
+        T3.CPA_TYPE = S2.CPA_TYPE and
+        T3.CSP_NUMBER = S2.CSP_NUMBER and
+        T3.OBG_GENERATED_ID = S2.OBG_ID and
+        T3.CPA_SUP_TYPE = 'S' and
+        T3.OB_TRN_TYP = 'DE'
+    )
+  ) S3
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S2.OTY_ID and
+      S2.OTR_TYPE = 'DE'
+  ) S4
+  cross apply
+  (
+    select top(1)
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.TYPE,
+      T1.CASE_ROLE_ID,
+      T1.START_DATE,
+      T1.END_DATE
+    from
+      CKT_CASE_ROLE T1 with(readuncommitted)
+    where
+      S3.NUMB = T1.CSP_NUMBER and
+      @casNumber = T1.CAS_NUMBER and
+      (T1.TYPE in ('CH', 'AR')) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CASE_ROLE T2 with(readuncommitted)
+        where
+          @casNumber = T2.CAS_NUMBER and
+          T2.TYPE = 'AP' and
+          T1.START_DATE &lt;= T2.END_DATE and
+          T1.END_DATE &gt;= T2.START_DATE and
+          S1.NUMB = T2.CSP_NUMBER
+      )
+  ) S5
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S2.CRD_ID and
+      CRV_ID = S2.CRV_ID and
+      CST_ID = S2.CST_ID and
+      CRT_TYPE = S2.CRT_TYPE and
+      CREATED_TMST &lt; @createdTmst1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S6
+</value>
+   </data>
+   <data name="ReadCsePersonCollectionCsePersonObligationType2">
+      <value>
+select
+  *
+from
+  (
+    select distinct
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_CASE_ROLE T2 with(readuncommitted)
+      where
+        T1.NUMB = T2.CSP_NUMBER and
+        T2.TYPE = 'AP' and
+        @casNumber = T2.CAS_NUMBER
+    )
+  ) S1
+  cross apply
+  (
+    select
+      T1.COLL_ID,
+      T1.APPLIED_TO_CD,
+      T1.COLL_DT,
+      T1.ADJ_IND,
+      T1.CONCURRENT_IND,
+      T1.CRT_TYPE,
+      T1.CST_ID,
+      T1.CRV_ID,
+      T1.CRD_ID,
+      T1.OBG_ID,
+      T1.CSP_NUMBER,
+      T1.CPA_TYPE,
+      T1.OTR_ID,
+      T1.OTR_TYPE,
+      T1.OTY_ID,
+      T1.COLL_ADJ_DT,
+      T1.CREATED_TMST,
+      T1.OB_TRN_AMT,
+      T1.PGM_APPLD_TO
+    from
+      CKT_COLLECTION T1 with(readuncommitted)
+    where
+      T1.CONCURRENT_IND = 'N' and
+      (T1.PGM_APPLD_TO in ('NA', 'NAI')) and
+      (
+        T1.ADJ_IND = 'Y' and
+        T1.COLL_ADJ_DT &gt; @collAdjDt or
+        T1.ADJ_IND = 'N'
+      ) and
+      S1.NUMB = T1.CSP_NUMBER and
+      T1.APPLIED_TO_CD = 'A' and
+      T1.CRT_TYPE &lt;&gt; 2 and
+      T1.CRT_TYPE &lt;&gt; 7 and
+      T1.OTR_TYPE = 'DE' and
+      T1.CPA_TYPE = 'R' and
+      exists
+      (
+        select
+          *
+        from
+          CKT_PMNT_REQUEST T11 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T10 with(readuncommitted)
+          join
+          CKT_DISB_TRAN T8 with(readuncommitted)
+          join
+          CKT_DISB_TRAN_RLN T9 with(readuncommitted)
+          on
+            T8.TYPE = 'C' and
+            T8.DISB_TRAN_ID = T9.DTR_P_GENERATED_ID and
+            T8.CPA_TYPE = T9.CPA_P_TYPE and
+            T8.CSP_NUMBER = T9.CSP_P_NUMBER
+          on
+            T10.DISB_TRAN_ID = T9.DTR_GENERATED_ID and
+            T10.CPA_TYPE = T9.CPA_TYPE and
+            T10.CSP_NUMBER = T9.CSP_NUMBER
+          on
+            T11.PAYMENT_REQUEST_ID = T10.PRQ_GENERATED_ID and
+            T11.CLASSIFICATION = 'SUP' and
+            (T11.CREATED_TIMESTAMP between cast(@timestamp1 as datetime2) and cast(@timestamp2 as datetime2))
+        where
+          T1.COLL_ID = T8.COL_ID and
+          T1.OTY_ID = T8.OTY_ID and
+          T1.OBG_ID = T8.OBG_ID and
+          T1.CSP_NUMBER = T8.CSP_NUMBER_DISB and
+          T1.CPA_TYPE = T8.CPA_TYPE_DISB and
+          T1.OTR_ID = T8.OTR_ID and
+          T1.OTR_TYPE = T8.OTR_TYPE_DISB and
+          T1.CRT_TYPE = T8.CRT_ID and
+          T1.CST_ID = T8.CST_ID and
+          T1.CRV_ID = T8.CRV_ID and
+          T1.CRD_ID = T8.CRD_ID
+      )
+  ) S2
+  cross apply
+  (
+    select top(1)
+      T1.NUMB
+    from
+      CKT_CSE_PERSON T1 with(readuncommitted)
+    where exists
+    (
+      select
+        *
+      from
+        CKT_OB_TRN T3 with(readuncommitted)
+      where
+        T1.NUMB = T3.CSP_SUP_NUMBER and
+        T3.OTY_TYPE = S2.OTY_ID and
+        T3.OB_TRN_TYP = S2.OTR_TYPE and
+        T3.OB_TRN_ID = S2.OTR_ID and
+        T3.CPA_TYPE = S2.CPA_TYPE and
+        T3.CSP_NUMBER = S2.CSP_NUMBER and
+        T3.OBG_GENERATED_ID = S2.OBG_ID and
+        T3.CPA_SUP_TYPE = 'S' and
+        T3.OB_TRN_TYP = 'DE'
+    )
+  ) S3
+  cross apply
+  (
+    select top(1)
+      DEBT_TYP_ID,
+      DEBT_TYP_CD,
+      DEBT_TYP_CLASS
+    from
+      CKT_OB_TYPE with(readuncommitted)
+    where
+      DEBT_TYP_ID = S2.OTY_ID and
+      S2.OTR_TYPE = 'DE'
+  ) S4
+  cross apply
+  (
+    select top(1)
+      T1.CAS_NUMBER,
+      T1.CSP_NUMBER,
+      T1.TYPE,
+      T1.CASE_ROLE_ID,
+      T1.START_DATE,
+      T1.END_DATE
+    from
+      CKT_CASE_ROLE T1 with(readuncommitted)
+    where
+      S3.NUMB = T1.CSP_NUMBER and
+      @casNumber = T1.CAS_NUMBER and
+      (T1.TYPE in ('CH', 'AR')) and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CASE_ROLE T2 with(readuncommitted)
+        where
+          @casNumber = T2.CAS_NUMBER and
+          T2.TYPE = 'AP' and
+          T1.START_DATE &lt;= T2.END_DATE and
+          T1.END_DATE &gt;= T2.START_DATE and
+          S1.NUMB = T2.CSP_NUMBER
+      )
+  ) S5
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      ADJ_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CRD_ID = S2.CRD_ID and
+      CRV_ID = S2.CRV_ID and
+      CST_ID = S2.CST_ID and
+      CRT_TYPE = S2.CRT_TYPE and
+      CREATED_TMST &lt; @timestamp1 and
+      ADJ_IND = 'Y' and
+      (COLL_ADJ_DT between cast(@date as date) and cast(@collAdjDt as date))
+  ) S6
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'ST' and
+  REPORT_LEVEL_ID = 'KS'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority10">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority11">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority13">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId and
+  REPORT_MONTH = @reportMonth
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority14">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  (REPORT_LEVEL in ('CW', 'AT'))
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority15">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'CW'
+order by
+  CAS_PAYING_ARR_PER desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority16">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+order by
+  CAS_PAYING_ARR_PER desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority17">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'XJ'
+order by
+  CAS_PAYING_ARR_PER desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority3">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'ST' and
+  REPORT_LEVEL_ID = 'KS'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority4">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority5">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  (REPORT_LEVEL in ('CW', 'CA', 'AT'))
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority6">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority7">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK,
+  CONTRACTOR_NUM,
+  PRV_YR_PD_AR_NUMTR,
+  PRV_YR_PD_AR_DENOM,
+  PAY_AR_PRV_YR_PCT,
+  PCT_CHG_BYR_ARS_PD
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority8">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DATE,
+  CAS_PAYING_ARR_DEN,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_PER,
+  CAS_PAYING_ARR_RNK
+from
+  CKT_DB_STAGE_PRI35 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority9">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  CAS_PAYING_ARR_NUM,
+  CAS_PAYING_ARR_DEN
+from
+  CKT_DB_STAGE_PRI12
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+</value>
+   </data>
+   <data name="ReadDebtAdjustment1">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.DEBT_ADJ_TYP,
+  T1.DEB_ADJ_DT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE
+from
+  CKT_OB_TRN T1 with(readuncommitted)
+where
+  T1.CREATED_TMST &gt; @createdTmst and
+  T1.OB_TRN_TYP = 'DA' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OB_TRN_RLN T2 with(readuncommitted)
+    where
+      T1.OTY_TYPE = T2.OTY_TYPE_SECONDARY and
+      T1.OB_TRN_TYP = T2.OTR_TYPE and
+      T1.OB_TRN_ID = T2.OTR_GENERATED_ID and
+      T1.CPA_TYPE = T2.CPA_TYPE and
+      T1.CSP_NUMBER = T2.CSP_NUMBER and
+      T1.OBG_GENERATED_ID = T2.OBG_GENERATED_ID and
+      @otyTypePrimary = T2.OTY_TYPE_PRIMARY and
+      @otrPType = T2.OTR_P_TYPE and
+      @otrPGeneratedId = T2.OTR_P_GENERATED_ID and
+      @cpaPType = T2.CPA_P_TYPE and
+      @cspPNumber = T2.CSP_P_NUMBER and
+      @obgPGeneratedId = T2.OBG_P_GENERATED_ID
+  )
+</value>
+   </data>
+   <data name="ReadDebtAdjustment2">
+      <value>
+select
+  OBG_GENERATED_ID,
+  CSP_NUMBER,
+  CPA_TYPE,
+  OB_TRN_ID,
+  OB_TRN_TYP,
+  OB_TRN_AMT,
+  DEBT_ADJ_TYP,
+  DEB_ADJ_DT,
+  CREATED_TMST,
+  CSP_SUP_NUMBER,
+  CPA_SUP_TYPE,
+  OTY_TYPE
+from
+  CKT_OB_TRN with(readuncommitted)
+where
+  @cspNumber = CSP_NUMBER and
+  DEBT_ADJ_TYP = 'D' and
+  DEB_ADJ_DT &gt; @debAdjDt and
+  OB_TRN_TYP = 'DA' and
+  CPA_TYPE = 'R'
+</value>
+   </data>
+   <data name="ReadDebtAdjustment3">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.DEBT_ADJ_TYP,
+  T1.DEB_ADJ_DT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE
+from
+  CKT_OB_TRN T1 with(readuncommitted)
+where
+  @otyType = T1.OTY_TYPE and
+  @obgGeneratedId = T1.OBG_GENERATED_ID and
+  @cspNumber = T1.CSP_NUMBER and
+  @cpaType = T1.CPA_TYPE and
+  T1.DEBT_ADJ_TYP = 'D' and
+  T1.DEB_ADJ_DT &gt; @debAdjDt and
+  T1.OB_TRN_TYP = 'DA' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OB_TRN_RLN T2 with(readuncommitted)
+    where
+      T1.OTY_TYPE = T2.OTY_TYPE_SECONDARY and
+      T1.OB_TRN_TYP = T2.OTR_TYPE and
+      T1.OB_TRN_ID = T2.OTR_GENERATED_ID and
+      T1.CPA_TYPE = T2.CPA_TYPE and
+      T1.CSP_NUMBER = T2.CSP_NUMBER and
+      T1.OBG_GENERATED_ID = T2.OBG_GENERATED_ID and
+      T2.OTY_TYPE_PRIMARY = @otyTypePrimary and
+      T2.OBG_P_GENERATED_ID = @obgPGeneratedId and
+      T2.OTR_P_TYPE = @otrPType and
+      T2.OTR_P_GENERATED_ID = @otrPGeneratedId and
+      T2.CPA_P_TYPE = @cpaPType and
+      T2.CSP_P_NUMBER = @cspPNumber and
+      T2.OTR_P_TYPE = 'DE'
+  )
+</value>
+   </data>
+   <data name="ReadDebtDetailObligationObligationTypeCsePerson1">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OTR_GENERATED_ID,
+  T1.OTY_TYPE,
+  T1.OTR_TYPE,
+  T1.DUE_DT,
+  T1.BAL_DUE_AMT,
+  T1.CVRD_PRD_START_DT,
+  T1.PRECNVRSN_PGM_CD,
+  T1.CREATED_TMST,
+  T2.CPA_TYPE,
+  T2.CSP_NUMBER,
+  T2.OB_ID,
+  T2.DTY_GENERATED_ID,
+  T2.PRIM_SEC_CD,
+  T2.CREATED_TMST,
+  T3.DEBT_TYP_CD,
+  T3.DEBT_TYP_CLASS,
+  T5.CSP_SUP_NUMBER
+from
+  CKT_OB_TYPE T3 with(readuncommitted)
+  join
+  CKT_OBLIGATION T2 with(readuncommitted)
+  join
+  CKT_OB_TRN T5 with(readuncommitted)
+  join
+  CKT_DEBT_DTL T1 with(readuncommitted)
+  on
+    T5.OTY_TYPE = T1.OTY_TYPE and
+    T5.OBG_GENERATED_ID = T1.OBG_GENERATED_ID and
+    T5.OB_TRN_TYP = T1.OTR_TYPE and
+    T5.OB_TRN_ID = T1.OTR_GENERATED_ID and
+    T5.CPA_TYPE = T1.CPA_TYPE and
+    T5.CSP_NUMBER = T1.CSP_NUMBER and
+    T5.CREATED_TMST &lt; @createdTmst and
+    T1.BAL_DUE_AMT &gt; 0 and
+    T5.CSP_SUP_NUMBER is not null and
+    T1.DUE_DT &lt;= @dueDt and
+    T5.OB_TRN_TYP = 'DE' and
+    T5.CPA_SUP_TYPE = 'S'
+  on
+    T2.DTY_GENERATED_ID = T5.OTY_TYPE and
+    T2.OB_ID = T5.OBG_GENERATED_ID and
+    T2.CSP_NUMBER = T5.CSP_NUMBER and
+    T2.CPA_TYPE = T5.CPA_TYPE and
+    @cspNumber = T2.CSP_NUMBER and
+    T2.CPA_TYPE = 'R'
+  on
+    T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+</value>
+   </data>
+   <data name="ReadDebtDetailObligationObligationTypeCsePerson2">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.OBG_GENERATED_ID,
+      T1.CSP_NUMBER CSP_NUMBER1,
+      T1.CPA_TYPE CPA_TYPE1,
+      T1.OTR_GENERATED_ID,
+      T1.OTY_TYPE,
+      T1.OTR_TYPE,
+      T1.DUE_DT,
+      T1.BAL_DUE_AMT,
+      T1.CVRD_PRD_START_DT,
+      T1.PRECNVRSN_PGM_CD,
+      T1.CREATED_TMST CREATED_TMST1,
+      T2.CPA_TYPE CPA_TYPE2,
+      T2.CSP_NUMBER CSP_NUMBER2,
+      T2.OB_ID,
+      T2.DTY_GENERATED_ID,
+      T2.PRIM_SEC_CD,
+      T2.CREATED_TMST CREATED_TMST2,
+      T3.DEBT_TYP_CD,
+      T3.DEBT_TYP_CLASS,
+      T5.CSP_SUP_NUMBER
+    from
+      CKT_OB_TYPE T3 with(readuncommitted)
+      join
+      CKT_OBLIGATION T2 with(readuncommitted)
+      join
+      CKT_OB_TRN T5 with(readuncommitted)
+      join
+      CKT_DEBT_DTL T1 with(readuncommitted)
+      on
+        T5.OTY_TYPE = T1.OTY_TYPE and
+        T5.OBG_GENERATED_ID = T1.OBG_GENERATED_ID and
+        T5.OB_TRN_TYP = T1.OTR_TYPE and
+        T5.OB_TRN_ID = T1.OTR_GENERATED_ID and
+        T5.CPA_TYPE = T1.CPA_TYPE and
+        T5.CSP_NUMBER = T1.CSP_NUMBER and
+        T5.CREATED_TMST &lt; @createdTmst and
+        T1.BAL_DUE_AMT = 0 and
+        T5.CSP_SUP_NUMBER is not null and
+        T1.DUE_DT &lt;= @dueDt and
+        T5.OB_TRN_TYP = 'DE' and
+        T5.CPA_SUP_TYPE = 'S'
+      on
+        T2.DTY_GENERATED_ID = T5.OTY_TYPE and
+        T2.OB_ID = T5.OBG_GENERATED_ID and
+        T2.CSP_NUMBER = T5.CSP_NUMBER and
+        T2.CPA_TYPE = T5.CPA_TYPE and
+        @cspNumber = T2.CSP_NUMBER and
+        T2.CPA_TYPE = 'R'
+      on
+        T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+  ) S1
+  outer apply
+  (
+    select top(1)
+      COLL_ID,
+      APPLIED_TO_CD,
+      COLL_DT,
+      ADJ_IND,
+      CONCURRENT_IND,
+      CRT_TYPE,
+      CST_ID,
+      CRV_ID,
+      CRD_ID,
+      OBG_ID,
+      CSP_NUMBER,
+      CPA_TYPE,
+      OTR_ID,
+      OTR_TYPE,
+      OTY_ID,
+      COLL_ADJ_DT,
+      CREATED_TMST,
+      OB_TRN_AMT,
+      PGM_APPLD_TO
+    from
+      CKT_COLLECTION with(readuncommitted)
+    where
+      CONCURRENT_IND = 'N' and
+      APPLIED_TO_CD = 'A' and
+      ADJ_IND = 'N' and
+      CREATED_TMST &gt; @createdTmst and
+      OTY_ID = S1.OTY_TYPE and
+      OBG_ID = S1.OBG_GENERATED_ID and
+      OTR_TYPE = S1.OTR_TYPE and
+      OTR_ID = S1.OTR_GENERATED_ID and
+      CPA_TYPE = S1.CPA_TYPE1 and
+      CSP_NUMBER = S1.CSP_NUMBER1 and
+      OTR_TYPE = 'DE'
+  ) S2
+</value>
+   </data>
+   <data name="ReadDebtObligationObligationTypeDebtDetail1">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE,
+  T2.PRIM_SEC_CD,
+  T2.CREATED_TMST,
+  T3.DEBT_TYP_CD,
+  T3.DEBT_TYP_CLASS,
+  T4.DUE_DT,
+  T4.BAL_DUE_AMT,
+  T4.CVRD_PRD_START_DT,
+  T4.PRECNVRSN_PGM_CD,
+  T4.CREATED_TMST
+from
+  CKT_OB_TYPE T3 with(readuncommitted)
+  join
+  CKT_OBLIGATION T2 with(readuncommitted)
+  join
+  CKT_OB_TRN T1 with(readuncommitted)
+  on
+    @cspNumber = T2.CSP_NUMBER and
+    T2.DTY_GENERATED_ID = T1.OTY_TYPE and
+    T2.OB_ID = T1.OBG_GENERATED_ID and
+    T2.CSP_NUMBER = T1.CSP_NUMBER and
+    T2.CPA_TYPE = T1.CPA_TYPE and
+    @cspSupNumber = T1.CSP_SUP_NUMBER and
+    T2.PRIM_SEC_CD &lt;&gt; 'S' and
+    T1.CREATED_TMST &lt; @createdTmst and
+    T1.OB_TRN_TYP = 'DE' and
+    T2.CPA_TYPE = 'R' and
+    T1.CPA_SUP_TYPE = 'S'
+  on
+    T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+  join
+  CKT_DEBT_DTL T4 with(readuncommitted)
+  on
+    T4.BAL_DUE_AMT &gt; 0 and
+    T1.OTY_TYPE = T4.OTY_TYPE and
+    T1.OBG_GENERATED_ID = T4.OBG_GENERATED_ID and
+    T1.OB_TRN_TYP = T4.OTR_TYPE and
+    T1.OB_TRN_ID = T4.OTR_GENERATED_ID and
+    T1.CPA_TYPE = T4.CPA_TYPE and
+    T1.CSP_NUMBER = T4.CSP_NUMBER and
+    (
+      T3.DEBT_TYP_CLASS = 'A' and
+      T4.DUE_DT &lt; dateadd(month, - 1, cast(@date as date)) or
+      T3.DEBT_TYP_CLASS in ('M', 'N')
+    )
+</value>
+   </data>
+   <data name="ReadDebtObligationObligationTypeDebtDetail2">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE,
+  T2.PRIM_SEC_CD,
+  T2.CREATED_TMST,
+  T3.DEBT_TYP_CD,
+  T3.DEBT_TYP_CLASS,
+  T4.DUE_DT,
+  T4.BAL_DUE_AMT,
+  T4.CVRD_PRD_START_DT,
+  T4.PRECNVRSN_PGM_CD,
+  T4.CREATED_TMST
+from
+  CKT_OB_TYPE T3 with(readuncommitted)
+  join
+  CKT_OBLIGATION T2 with(readuncommitted)
+  join
+  CKT_OB_TRN T1 with(readuncommitted)
+  on
+    @cspNumber = T2.CSP_NUMBER and
+    T2.DTY_GENERATED_ID = T1.OTY_TYPE and
+    T2.OB_ID = T1.OBG_GENERATED_ID and
+    T2.CSP_NUMBER = T1.CSP_NUMBER and
+    T2.CPA_TYPE = T1.CPA_TYPE and
+    @cspSupNumber = T1.CSP_SUP_NUMBER and
+    T2.PRIM_SEC_CD &lt;&gt; 'S' and
+    T1.CREATED_TMST &lt;= @createdTmst and
+    T1.OB_TRN_TYP = 'DE' and
+    T2.CPA_TYPE = 'R' and
+    T1.CPA_SUP_TYPE = 'S'
+  on
+    T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+  join
+  CKT_DEBT_DTL T4 with(readuncommitted)
+  on
+    T4.BAL_DUE_AMT = 0 and
+    T1.OTY_TYPE = T4.OTY_TYPE and
+    T1.OBG_GENERATED_ID = T4.OBG_GENERATED_ID and
+    T1.OB_TRN_TYP = T4.OTR_TYPE and
+    T1.OB_TRN_ID = T4.OTR_GENERATED_ID and
+    T1.CPA_TYPE = T4.CPA_TYPE and
+    T1.CSP_NUMBER = T4.CSP_NUMBER and
+    (
+      T3.DEBT_TYP_CLASS = 'A' and
+      T4.DUE_DT &lt; dateadd(month, - 1, cast(@date as date)) or
+      T3.DEBT_TYP_CLASS in ('M', 'N')
+    )
+where exists
+(
+  select
+    *
+  from
+    CKT_COLLECTION T5 with(readuncommitted)
+  where
+    T1.OTY_TYPE = T5.OTY_ID and
+    T1.OB_TRN_TYP = T5.OTR_TYPE and
+    T1.OB_TRN_ID = T5.OTR_ID and
+    T1.CPA_TYPE = T5.CPA_TYPE and
+    T1.CSP_NUMBER = T5.CSP_NUMBER and
+    T1.OBG_GENERATED_ID = T5.OBG_ID and
+    T5.APPLIED_TO_CD = 'A' and
+    T5.ADJ_IND = 'N' and
+    T5.CREATED_TMST &gt; @createdTmst
+)
+</value>
+   </data>
+   <data name="ReadDebtObligationObligationTypeDebtDetail3">
+      <value>
+select distinct
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE,
+  T2.PRIM_SEC_CD,
+  T2.CREATED_TMST,
+  T3.DEBT_TYP_CD,
+  T3.DEBT_TYP_CLASS,
+  T4.DUE_DT,
+  T4.BAL_DUE_AMT,
+  T4.CVRD_PRD_START_DT,
+  T4.PRECNVRSN_PGM_CD,
+  T4.CREATED_TMST
+from
+  CKT_OB_TYPE T3 with(readuncommitted)
+  join
+  CKT_OBLIGATION T2 with(readuncommitted)
+  join
+  CKT_OB_TRN T1 with(readuncommitted)
+  on
+    @cspNumber = T2.CSP_NUMBER and
+    T2.DTY_GENERATED_ID = T1.OTY_TYPE and
+    T2.OB_ID = T1.OBG_GENERATED_ID and
+    T2.CSP_NUMBER = T1.CSP_NUMBER and
+    T2.CPA_TYPE = T1.CPA_TYPE and
+    @cspSupNumber = T1.CSP_SUP_NUMBER and
+    T2.PRIM_SEC_CD &lt;&gt; 'S' and
+    T1.CREATED_TMST &lt;= @createdTmst and
+    T1.OB_TRN_TYP = 'DE' and
+    T2.CPA_TYPE = 'R' and
+    T1.CPA_SUP_TYPE = 'S'
+  on
+    T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+  join
+  CKT_DEBT_DTL T4 with(readuncommitted)
+  on
+    T4.BAL_DUE_AMT = 0 and
+    T1.OTY_TYPE = T4.OTY_TYPE and
+    T1.OBG_GENERATED_ID = T4.OBG_GENERATED_ID and
+    T1.OB_TRN_TYP = T4.OTR_TYPE and
+    T1.OB_TRN_ID = T4.OTR_GENERATED_ID and
+    T1.CPA_TYPE = T4.CPA_TYPE and
+    T1.CSP_NUMBER = T4.CSP_NUMBER and
+    (
+      T3.DEBT_TYP_CLASS = 'A' and
+      T4.DUE_DT &lt; dateadd(month, - 1, cast(@date as date)) or
+      T3.DEBT_TYP_CLASS in ('M', 'N')
+    )
+where exists
+(
+  select
+    *
+  from
+    CKT_OB_TRN T6 with(readuncommitted)
+    join
+    CKT_OB_TRN_RLN T5 with(readuncommitted)
+    on
+      T6.OTY_TYPE = T5.OTY_TYPE_SECONDARY and
+      T6.OB_TRN_TYP = T5.OTR_TYPE and
+      T6.OB_TRN_ID = T5.OTR_GENERATED_ID and
+      T6.CPA_TYPE = T5.CPA_TYPE and
+      T6.CSP_NUMBER = T5.CSP_NUMBER and
+      T6.OBG_GENERATED_ID = T5.OBG_GENERATED_ID and
+      T6.DEBT_ADJ_TYP = 'D' and
+      T6.DEB_ADJ_DT &gt; @date and
+      T6.OB_TRN_TYP = 'DA'
+  where
+    T1.OTY_TYPE = T5.OTY_TYPE_PRIMARY and
+    T1.OB_TRN_TYP = T5.OTR_P_TYPE and
+    T1.OB_TRN_ID = T5.OTR_P_GENERATED_ID and
+    T1.CPA_TYPE = T5.CPA_P_TYPE and
+    T1.CSP_NUMBER = T5.CSP_P_NUMBER and
+    T1.OBG_GENERATED_ID = T5.OBG_P_GENERATED_ID
+)
+</value>
+   </data>
+   <data name="ReadDebtObligationObligationTypeDebtDetailDebtAdjustment">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.OB_TRN_AMT,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE,
+  T2.PRIM_SEC_CD,
+  T2.CREATED_TMST,
+  T3.DEBT_TYP_CD,
+  T3.DEBT_TYP_CLASS,
+  T4.DUE_DT,
+  T4.BAL_DUE_AMT,
+  T4.CVRD_PRD_START_DT,
+  T4.PRECNVRSN_PGM_CD,
+  T4.CREATED_TMST,
+  T5.OBG_GENERATED_ID,
+  T5.CSP_NUMBER,
+  T5.CPA_TYPE,
+  T5.OB_TRN_ID,
+  T5.OB_TRN_TYP,
+  T5.OB_TRN_AMT,
+  T5.DEBT_ADJ_TYP,
+  T5.DEB_ADJ_DT,
+  T5.CREATED_TMST,
+  T5.CSP_SUP_NUMBER,
+  T5.CPA_SUP_TYPE,
+  T5.OTY_TYPE
+from
+  CKT_OB_TRN T5 with(readuncommitted),
+  CKT_OB_TYPE T3 with(readuncommitted)
+  join
+  CKT_OBLIGATION T2 with(readuncommitted)
+  join
+  CKT_OB_TRN T1 with(readuncommitted)
+  on
+    @cspNumber = T2.CSP_NUMBER and
+    T2.DTY_GENERATED_ID = T1.OTY_TYPE and
+    T2.OB_ID = T1.OBG_GENERATED_ID and
+    T2.CSP_NUMBER = T1.CSP_NUMBER and
+    T2.CPA_TYPE = T1.CPA_TYPE and
+    @cspSupNumber = T1.CSP_SUP_NUMBER and
+    T2.PRIM_SEC_CD &lt;&gt; 'S' and
+    T1.OB_TRN_TYP = 'DE' and
+    T2.CPA_TYPE = 'R' and
+    T1.CPA_SUP_TYPE = 'S'
+  on
+    T3.DEBT_TYP_ID = T2.DTY_GENERATED_ID
+  join
+  CKT_DEBT_DTL T4 with(readuncommitted)
+  on
+    T1.OTY_TYPE = T4.OTY_TYPE and
+    T1.OBG_GENERATED_ID = T4.OBG_GENERATED_ID and
+    T1.OB_TRN_TYP = T4.OTR_TYPE and
+    T1.OB_TRN_ID = T4.OTR_GENERATED_ID and
+    T1.CPA_TYPE = T4.CPA_TYPE and
+    T1.CSP_NUMBER = T4.CSP_NUMBER and
+    (
+      T3.DEBT_TYP_CLASS = 'A' and
+      T4.DUE_DT &lt; dateadd(month, - 1, cast(@date as date)) or
+      T3.DEBT_TYP_CLASS in ('M', 'N')
+    )
+where
+  T5.CREATED_TMST &gt; @createdTmst1 and
+  T5.CREATED_TMST &lt; @createdTmst2 and
+  T5.DEBT_ADJ_TYP = 'D' and
+  T5.OB_TRN_TYP = 'DA' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_OB_TRN_RLN T6 with(readuncommitted)
+    where
+      T5.OTY_TYPE = T6.OTY_TYPE_SECONDARY and
+      T5.OB_TRN_TYP = T6.OTR_TYPE and
+      T5.OB_TRN_ID = T6.OTR_GENERATED_ID and
+      T5.CPA_TYPE = T6.CPA_TYPE and
+      T5.CSP_NUMBER = T6.CSP_NUMBER and
+      T5.OBG_GENERATED_ID = T6.OBG_GENERATED_ID and
+      T1.OTY_TYPE = T6.OTY_TYPE_PRIMARY and
+      T1.OB_TRN_TYP = T6.OTR_P_TYPE and
+      T1.OB_TRN_ID = T6.OTR_P_GENERATED_ID and
+      T1.CPA_TYPE = T6.CPA_P_TYPE and
+      T1.CSP_NUMBER = T6.CSP_P_NUMBER and
+      T1.OBG_GENERATED_ID = T6.OBG_P_GENERATED_ID
+  )
+</value>
+   </data>
+   <data name="ReadLegalReferralServiceProvider">
+      <value>
+select
+  T1.CAS_NUMBER,
+  T1.IDENTIFIER,
+  T1.STATUS_DATE,
+  T1.STATUS,
+  T1.REFERRAL_DATE,
+  T1.CREATED_TIMESTAMP,
+  T1.REFERRAL_REASON_1,
+  T1.REFERRAL_REASON_2,
+  T1.REFERRAL_REASON_3,
+  T1.REFERRAL_REASON_4,
+  T1.COURT_CASE_NO,
+  T1.TRB_ID,
+  T2.SERVICE_PRVDER_ID,
+  T2.USER_ID,
+  T2.ROLE_CODE
+from
+  CKT_LEGAL_REFERRAL T1 with(readuncommitted),
+  CKT_SERVICE_PRVDER T2 with(readuncommitted)
+where
+  @casNumber = T1.CAS_NUMBER and
+  T1.CREATED_TIMESTAMP &lt;= @createdTimestamp and
+  (
+    (T1.STATUS in ('O', 'S')) and
+    T1.CREATED_TIMESTAMP &lt;= @createdTimestamp or
+    (T1.STATUS in ('C', 'W', 'R')) and
+    T1.STATUS_DATE &gt;= @statusDate and
+    T1.CREATED_TIMESTAMP &lt;= @createdTimestamp
+  ) and
+  exists
+  (
+    select
+      *
+    from
+      CKT_ASSGN_LEG_REF T3 with(readuncommitted)
+    where
+      T1.IDENTIFIER = T3.LGR_ID and
+      T1.CAS_NUMBER = T3.CAS_NO and
+      T3.EFFECTIVE_DATE &lt;= @statusDate and
+      T3.DISCONTINUE_DATE &gt;= @discontinueDate and
+      T2.SERVICE_PRVDER_ID = T3.SPD_ID
+  )
+order by
+  T2.SERVICE_PRVDER_ID,
+  T1.STATUS_DATE desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CAS_PAYING_ARR_DEN = @casPayingArrDen,
+  CAS_PAYING_ARR_NUM = @casPayingArrNum,
+  CAS_PAYING_ARR_PER = @casPayingArrPer,
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority10">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  CAS_PAYING_ARR_NUM = @casPayingArrNum,
+  CAS_PAYING_ARR_DEN = @casPayingArrDen,
+  CAS_PAYING_ARR_PER = @casPayingArrPer,
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority3">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  CAS_PAYING_ARR_NUM = @casPayingArrNum,
+  CAS_PAYING_ARR_DEN = @casPayingArrDen,
+  CAS_PAYING_ARR_PER = @casPayingArrPer,
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority4">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CAS_PAYING_ARR_DEN = @casPayingArrDen
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority5">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CAS_PAYING_ARR_NUM = @casPayingArrNum
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority6">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  AS_OF_DT = @asOfDt,
+  CAS_PAYING_ARR_NUM = @casPayingArrNum,
+  CAS_PAYING_ARR_DEN = @casPayingArrDen,
+  CAS_PAYING_ARR_PER = @casPayingArrPer,
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk,
+  PRV_YR_PD_AR_NUMTR = @prvYrPdArNumtr,
+  PRV_YR_PD_AR_DENOM = @prvYrPdArDenom,
+  PAY_AR_PRV_YR_PCT = @payArPrvYrPct,
+  PCT_CHG_BYR_ARS_PD = @pctChgByrArsPd
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority7">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  CAS_PAYING_ARR_PER = @casPayingArrPer,
+  PRV_YR_PD_AR_NUMTR = @prvYrPdArNumtr,
+  PRV_YR_PD_AR_DENOM = @prvYrPdArDenom,
+  PAY_AR_PRV_YR_PCT = @payArPrvYrPct,
+  PCT_CHG_BYR_ARS_PD = @pctChgByrArsPd
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority8">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CAS_PAYING_ARR_PER = @casPayingArrPer
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority9">
+      <value>
+update CKT_DB_STAGE_PRI35
+set
+  CAS_PAYING_ARR_RNK = @casPayingArrRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadCseOrganizationOffice">
+      <value>
+select
+  T3.COG_CHILD_CODE,
+  T3.COG_CHILD_TYPE,
+  T2.OFFICE_ID,
+  T2.COG_TYPE_CODE,
+  T2.COG_CODE,
+  T2.OFF_OFFICE
+from
+  CKT_CSE_ORG_RELATN T3 with(readuncommitted)
+  join
+  CKT_OFFICE T2 with(readuncommitted)
+  on
+    T3.COG_CHILD_TYPE = 'J' and
+    T3.REASON_CODE = 'JC' and
+    T3.COG_PARENT_TYPE = T2.COG_TYPE_CODE and
+    T3.COG_PARENT_CODE = T2.COG_CODE
+where exists
+(
+  select
+    *
+  from
+    CKT_OFFC_SRVC_PRVR T5 with(readuncommitted)
+    join
+    CKT_ASSIGN_CASE T6 with(readuncommitted)
+    on
+      T5.EFFECTIVE_DATE = T6.OSP_DATE and
+      T5.ROLE_CODE = T6.OSP_CODE and
+      T5.OFF_GENERATED_ID = T6.OFF_ID and
+      T5.SPD_GENERATED_ID = T6.SPD_ID and
+      T6.EFFECTIVE_DATE &lt;= @effectiveDate and
+      T6.DISCONTINUE_DATE &gt;= @effectiveDate and
+      T6.CAS_NO = @casNo
+  where
+    T2.OFFICE_ID = T5.OFF_GENERATED_ID
+)
+</value>
+   </data>
+</root>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadCsePersonAddress">
+      <value>
+select
+  T1.IDENTIFIER,
+  T1.CSP_NUMBER,
+  T1.VERIFIED_DATE,
+  T1.END_DATE,
+  T1.CREATED_TIMESTAMP
+from
+  CKT_CSE_PERS_ADDR T1 with(readuncommitted)
+where
+  T1.CREATED_TIMESTAMP &lt;= @createdTimestamp and
+  T1.END_DATE &gt;= @endDate and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CSE_PERSON T2 with(readuncommitted)
+      join
+      CKT_CASE_ROLE T3 with(readuncommitted)
+      on
+        T2.NUMB = T3.CSP_NUMBER and
+        T3.TYPE = 'AP' and
+        T3.START_DATE &lt;= @endDate and
+        T3.END_DATE &gt;= @endDate and
+        T3.CAS_NUMBER = @casNumber
+    where
+      T2.NUMB = T1.CSP_NUMBER
+  )
+order by
+  T1.VERIFIED_DATE desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority4">
+      <value>
+select
+  REPORT_MONTH,
+  RUN_NUMBER,
+  CASE_NUMBER,
+  AS_OF_DATE,
+  CURRENT_CS_IND,
+  OTHER_OBG_IND,
+  PAYING_CASE_IND,
+  ADDRESS_VER_IND,
+  EMPLOYER_VER_IND
+from
+  CKT_DB_STAGE_PRI_4
+where
+  RUN_NUMBER = @runNumber and
+  REPORT_MONTH = cast(@reportMonth as integer) and
+  CASE_NUMBER &gt; @caseNumber
+</value>
+   </data>
+   <data name="ReadIncomeSource">
+      <value>
+select
+  T1.IDENTIFIER,
+  T1.TYPE,
+  T1.RETURN_DT,
+  T1.RETURN_CD,
+  T1.CREATED_TIMESTAMP,
+  T1.CSP_I_NUMBER,
+  T1.START_DT,
+  T1.END_DT
+from
+  CKT_INCOME_SOURCE T1 with(readuncommitted)
+where
+  (T1.TYPE in ('E', 'M', 'O')) and
+  T1.CREATED_TIMESTAMP &lt;= @createdTimestamp and
+  T1.END_DT &gt;= @endDt and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CSE_PERSON T2 with(readuncommitted)
+      join
+      CKT_CASE_ROLE T3 with(readuncommitted)
+      on
+        T2.NUMB = T3.CSP_NUMBER and
+        T3.TYPE = 'AP' and
+        T3.START_DATE &lt;= @endDt and
+        T3.END_DATE &gt;= @endDt and
+        T3.CAS_NUMBER = @casNumber
+    where
+      T2.NUMB = T1.CSP_I_NUMBER
+  )
+order by
+  T1.RETURN_DT desc
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority4">
+      <value>
+update CKT_DB_STAGE_PRI_4
+set
+  ADDRESS_VER_IND = @addressVerInd,
+  EMPLOYER_VER_IND = @employerVerInd
+where
+  REPORT_MONTH = @reportMonth and
+  RUN_NUMBER = @runNumber and
+  CASE_NUMBER = @caseNumber
+</value>
+   </data>
+</root>

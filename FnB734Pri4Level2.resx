@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadCase">
+      <value>
+select
+  T1.NUMB,
+  T1.NO_JURISDICTION_CD
+from
+  CKT_CASE T1 with(readuncommitted)
+where
+  T1.NO_JURISDICTION_CD = ' ' and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CASE_ROLE T2 with(readuncommitted)
+    where
+      T1.NUMB = T2.CAS_NUMBER and
+      @cspNumber1 = T2.CSP_NUMBER and
+      T2.TYPE = 'AP' and
+      T2.START_DATE &lt;= @startDate and
+      T2.END_DATE &gt;= @startDate
+  ) and
+  exists
+  (
+    select
+      *
+    from
+      CKT_CASE_ROLE T3 with(readuncommitted)
+    where
+      T1.NUMB = T3.CAS_NUMBER and
+      @cspNumber2 = T3.CSP_NUMBER and
+      T3.TYPE = 'CH' and
+      T3.START_DATE &lt;= @startDate and
+      T3.END_DATE &gt;= @startDate
+  )
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  RUN_NUMBER,
+  CASE_NUMBER,
+  AS_OF_DATE,
+  CURRENT_CS_IND,
+  OTHER_OBG_IND,
+  CS_DUE_AMT,
+  CS_COLLECTED_AMT,
+  PAYING_CASE_IND,
+  PATERNITY_EST_IND,
+  ADDRESS_VER_IND,
+  EMPLOYER_VER_IND
+from
+  CKT_DB_STAGE_PRI_4 with(xlock)
+where
+  RUN_NUMBER = @runNumber and
+  REPORT_MONTH = cast(@reportMonth as integer) and
+  CASE_NUMBER = @caseNumber and
+  CURRENT_CS_IND = ' '
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  RUN_NUMBER,
+  CASE_NUMBER,
+  AS_OF_DATE,
+  CURRENT_CS_IND,
+  OTHER_OBG_IND,
+  CS_DUE_AMT,
+  CS_COLLECTED_AMT,
+  PAYING_CASE_IND,
+  PATERNITY_EST_IND,
+  ADDRESS_VER_IND,
+  EMPLOYER_VER_IND
+from
+  CKT_DB_STAGE_PRI_4
+where
+  RUN_NUMBER = @runNumber and
+  REPORT_MONTH = cast(@reportMonth as integer) and
+  CURRENT_CS_IND = ' '
+</value>
+   </data>
+   <data name="ReadDebtDebtDetailCsePersonCsePerson">
+      <value>
+select
+  T1.OBG_GENERATED_ID,
+  T1.CSP_NUMBER,
+  T1.CPA_TYPE,
+  T1.OB_TRN_ID,
+  T1.OB_TRN_TYP,
+  T1.CREATED_TMST,
+  T1.CSP_SUP_NUMBER,
+  T1.CPA_SUP_TYPE,
+  T1.OTY_TYPE,
+  T2.DUE_DT,
+  T2.CREATED_TMST
+from
+  CKT_OB_TRN T1 with(readuncommitted)
+  join
+  CKT_DEBT_DTL T2 with(readuncommitted)
+  on
+    (T2.DUE_DT between cast(@date1 as date) and cast(@date2 as date)) and
+    T2.CREATED_TMST &lt;= @createdTmst and
+    T1.OTY_TYPE = T2.OTY_TYPE and
+    T1.OBG_GENERATED_ID = T2.OBG_GENERATED_ID and
+    T1.OB_TRN_TYP = T2.OTR_TYPE and
+    T1.OB_TRN_ID = T2.OTR_GENERATED_ID and
+    T1.CPA_TYPE = T2.CPA_TYPE and
+    T1.CSP_NUMBER = T2.CSP_NUMBER and
+    T1.CREATED_TMST &lt;= @createdTmst and
+    T1.CSP_SUP_NUMBER is not null and
+    T1.OB_TRN_TYP = 'DE' and
+    T1.CPA_SUP_TYPE = 'S'
+where exists
+(
+  select
+    *
+  from
+    CKT_OBLIGATION T5 with(readuncommitted)
+  where
+    T5.DTY_GENERATED_ID = T1.OTY_TYPE and
+    T5.OB_ID = T1.OBG_GENERATED_ID and
+    T5.CSP_NUMBER = T1.CSP_NUMBER and
+    T5.CPA_TYPE = T1.CPA_TYPE and
+    T5.PRIM_SEC_CD &lt;&gt; 'S' and
+    @dtyGeneratedId = T5.DTY_GENERATED_ID and
+    T5.CSP_NUMBER &gt; @cspNumber and
+    T5.CPA_TYPE = 'R'
+)
+order by
+  T1.CSP_NUMBER
+</value>
+   </data>
+   <data name="ReadObligationType">
+      <value>
+select
+  DEBT_TYP_ID,
+  DEBT_TYP_CD,
+  EFFECTIVE_DT,
+  DISCONTINUE_DT
+from
+  CKT_OB_TYPE
+where
+  DEBT_TYP_CD = 'CS' and
+  EFFECTIVE_DT &lt;= @effectiveDt and
+  DISCONTINUE_DT &gt;= @effectiveDt
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI_4
+set
+  CURRENT_CS_IND = @currentCsInd
+where
+  REPORT_MONTH = @reportMonth and
+  RUN_NUMBER = @runNumber and
+  CASE_NUMBER = @caseNumber
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI_4
+set
+  CURRENT_CS_IND = @currentCsInd,
+  OTHER_OBG_IND = @otherObgInd
+where
+  REPORT_MONTH = @reportMonth and
+  RUN_NUMBER = @runNumber and
+  CASE_NUMBER = @caseNumber
+</value>
+   </data>
+</root>

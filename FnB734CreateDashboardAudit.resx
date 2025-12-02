@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="CreateDashboardAuditData">
+      <value>
+insert into CKT_DB_AUDIT_DATA
+(
+  REPORT_MONTH,
+  DASHBOARD_PRIORITY,
+  RUN_NUMBER,
+  CREATED_TIMESTAMP,
+  OFFICE,
+  JUDICIAL_DISTRICT,
+  WORKER_ID,
+  CASE_NUMBER,
+  STANDARD_NUMBER,
+  PAYOR_CSP_NUMBER,
+  SUPP_CSP_NUMBER,
+  FTE,
+  COLLECTION_AMT,
+  COLL_APPLIED_TO_CD,
+  COLL_CREATED_DT,
+  COLL_TYPE,
+  DEBT_BALANCE_DUE,
+  DEBT_DUE_DT,
+  DEBT_TYPE,
+  LEGAL_ACTION_DT,
+  LEGAL_REF_DT,
+  LEGAL_REF_NO,
+  DAYS_REPORTED,
+  VERIFIED_DT,
+  CASE_DT,
+  REVIEW_DT,
+  CONTRACTOR_NUM
+)
+values
+(
+  @reportMonth,
+  @dashboardPriority,
+  @runNumber,
+  @createdTimestamp,
+  @office,
+  @judicialDistrict,
+  @workerId,
+  @caseNumber,
+  @standardNumber,
+  @payorCspNumber,
+  @suppCspNumber,
+  @fte,
+  @collectionAmt,
+  @collAppliedToCd,
+  @collCreatedDt,
+  @collType,
+  @debtBalanceDue,
+  @debtDueDt,
+  @debtType,
+  @legalActionDt,
+  @legalRefDt,
+  @legalRefNo,
+  @daysReported,
+  @verifiedDt,
+  @caseDt,
+  @reviewDt,
+  @contractorNum
+)
+</value>
+   </data>
+</root>

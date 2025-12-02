@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+   <resheader name="resmimetype">
+      <value>text/microsoft-resx</value>
+   </resheader>
+   <resheader name="version">
+      <value>2.0</value>
+   </resheader>
+   <resheader name="reader">
+      <value>System.Resources.ResXResourceReader</value>
+   </resheader>
+   <resheader name="writer">
+      <value>System.Resources.ResXResourceWriter</value>
+   </resheader>
+   <data name="ReadCseOrganization">
+      <value>
+select
+  ORGANZTN_ID,
+  TYPE_CODE
+from
+  CKT_CSE_ORGANIZATN with(readuncommitted)
+where
+  TYPE_CODE = 'J'
+order by
+  ORGANZTN_ID
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority1">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_DEN,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  CONTRACTOR_NUM
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority2">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_DEN,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  CONTRACTOR_NUM
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'JD'
+order by
+  CAS_PER_FTE_AVG desc
+</value>
+   </data>
+   <data name="ReadDashboardStagingPriority3">
+      <value>
+select
+  REPORT_MONTH,
+  REPORT_LEVEL,
+  REPORT_LEVEL_ID,
+  AS_OF_DT,
+  CAS_UNDER_ORD_DEN,
+  CAS_PER_FTE_NUM,
+  CAS_PER_FTE_DEN,
+  CAS_PER_FTE_AVG,
+  CAS_PER_FTE_RNK,
+  CONTRACTOR_NUM
+from
+  CKT_DB_STAGE_PRI12 with(xlock)
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = 'XJ'
+order by
+  CAS_PER_FTE_AVG desc
+</value>
+   </data>
+   <data name="ReadOfficeOfficeStaffing">
+      <value>
+select
+  *
+from
+  (
+    select
+      T1.OFFICE_ID,
+      T1.COG_TYPE_CODE,
+      T1.COG_CODE,
+      T1.EFFECTIVE_DATE,
+      T1.DISCONTINUE_DATE,
+      T1.OFF_OFFICE
+    from
+      CKT_OFFICE T1 with(readuncommitted)
+    where
+      T1.EFFECTIVE_DATE &lt;= @effectiveDate and
+      T1.DISCONTINUE_DATE &gt;= @effectiveDate and
+      exists
+      (
+        select
+          *
+        from
+          CKT_CSE_ORG_RELATN T3 with(readuncommitted)
+        where
+          T1.COG_TYPE_CODE = T3.COG_PARENT_TYPE and
+          T1.COG_CODE = T3.COG_PARENT_CODE and
+          T3.REASON_CODE = 'JC' and
+          @cogChildType = T3.COG_CHILD_TYPE and
+          @cogChildCode = T3.COG_CHILD_CODE
+      )
+  ) S1
+  cross apply
+  (
+    select top(1)
+      YEAR_MONTH,
+      F_T_E,
+      OFF_GENERATED_ID
+    from
+      CKT_OFFC_STAFFING with(readuncommitted)
+    where
+      S1.OFFICE_ID = OFF_GENERATED_ID and
+      YEAR_MONTH = @yearMonth
+  ) S2
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority1">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  CAS_PER_FTE_NUM = @casPerFteNum,
+  CAS_PER_FTE_DEN = @casPerFteDen,
+  CAS_PER_FTE_AVG = @casPerFteAvg
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+   <data name="UpdateDashboardStagingPriority2">
+      <value>
+update CKT_DB_STAGE_PRI12
+set
+  CAS_PER_FTE_RNK = @casPerFteRnk
+where
+  REPORT_MONTH = @reportMonth and
+  REPORT_LEVEL = @reportLevel and
+  REPORT_LEVEL_ID = @reportLevelId
+</value>
+   </data>
+</root>
